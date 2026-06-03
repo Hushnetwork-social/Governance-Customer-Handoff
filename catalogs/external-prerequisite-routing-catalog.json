@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "governance-customer-handoff-external-prerequisite-routing-catalog/v1",
+  "featureId": "FEAT-166",
+  "feat149Alignment": true,
+  "publicStateReadinessResolvedByFeat166": false,
+  "routes": [
+    {
+      "routeId": "GCH-ROUTE-CUSTOMER-AUTHORITY-REVIEW",
+      "ownerClass": "customer",
+      "sourceFeature": "FEAT-149",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "evidenceVisibility": "private-only",
+      "publicSafeSummary": "Customer authority review is required outside the public package."
+    },
+    {
+      "routeId": "GCH-ROUTE-EXTERNAL-LEGAL-REVIEW",
+      "ownerClass": "external-authority",
+      "sourceFeature": "FEAT-149",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "evidenceVisibility": "restricted-ref-only",
+      "publicSafeSummary": "External legal or public prerequisite review is routed without payload publication."
+    },
+    {
+      "routeId": "GCH-ROUTE-AUDITOR-PACKAGE-REVIEW",
+      "ownerClass": "external-auditor",
+      "sourceFeature": "FEAT-166",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "evidenceVisibility": "public",
+      "publicSafeSummary": "The public package can be consumed by auditor review without representing acceptance."
+    },
+    {
+      "routeId": "GCH-ROUTE-PROMOTION-OWNER-REVIEW",
+      "ownerClass": "promotion-owner",
+      "sourceFeature": "FEAT-156",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "evidenceVisibility": "public",
+      "publicSafeSummary": "The promotion owner reviews the proposal-only readiness package before any register action."
+    }
+  ]
+}

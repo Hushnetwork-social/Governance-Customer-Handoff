@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "governance-customer-handoff-responsibility-domain-catalog/v1",
+  "featureId": "FEAT-166",
+  "domains": [
+    {
+      "domain": "hush-technical-proof",
+      "ownerClass": "hush",
+      "requiredEvidence": [
+        "accepted technical proof package refs",
+        "hash-bound public package manifests",
+        "public-only validation summaries"
+      ],
+      "mayClaim": [
+        "Hush provides technical evidence package refs for reviewer validation.",
+        "Hush identifies public-safe proof boundaries and no-payload restricted refs."
+      ],
+      "mustNotClaim": [
+        "Hush certifies legal sufficiency.",
+        "Hush resolves customer governance authority.",
+        "Hush grants public/state election readiness."
+      ],
+      "blockingResultCodes": [
+        "GCH-MISSING-HUSH-TECHNICAL-REF",
+        "GCH-HUSH-OVERCLAIM"
+      ]
+    },
+    {
+      "domain": "customer-governance",
+      "ownerClass": "customer",
+      "requiredEvidence": [
+        "customer-owned authority review",
+        "customer-owned governance decision",
+        "customer-owned checklist completion"
+      ],
+      "mayClaim": [
+        "Customer governance decisions are customer-owned and outside the public package payload."
+      ],
+      "mustNotClaim": [
+        "Customer answers are published here.",
+        "Customer legal authority names are published here.",
+        "Customer governance decisions are made by FEAT-166."
+      ],
+      "blockingResultCodes": [
+        "GCH-CUSTOMER-ANSWER-PUBLISHED",
+        "GCH-CUSTOMER-DECISION-OVERCLAIM"
+      ]
+    },
+    {
+      "domain": "external-authority-prerequisite",
+      "ownerClass": "external-authority",
+      "requiredEvidence": [
+        "external prerequisite route id",
+        "owner class",
+        "visibility boundary"
+      ],
+      "mayClaim": [
+        "External authority prerequisites are routed and tracked as external-boundary items."
+      ],
+      "mustNotClaim": [
+        "External authority approval is complete.",
+        "Public/state readiness is resolved by FEAT-166."
+      ],
+      "blockingResultCodes": [
+        "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM",
+        "GCH-PUBLIC-STATE-READINESS-OVERCLAIM"
+      ]
+    },
+    {
+      "domain": "external-auditor-review",
+      "ownerClass": "external-auditor",
+      "requiredEvidence": [
+        "auditor review route id",
+        "no-payload reviewer ref when applicable",
+        "review status visibility marker"
+      ],
+      "mayClaim": [
+        "External auditor review can consume the handoff package."
+      ],
+      "mustNotClaim": [
+        "External audit acceptance is granted by this repository.",
+        "External auditor notes are published here."
+      ],
+      "blockingResultCodes": [
+        "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",
+        "GCH-AUDITOR-NOTE-PUBLISHED"
+      ]
+    },
+    {
+      "domain": "promotion-owner-action",
+      "ownerClass": "promotion-owner",
+      "requiredEvidence": [
+        "proposal-only readiness fragment",
+        "score proposal package",
+        "direct register mutation disabled marker"
+      ],
+      "mayClaim": [
+        "The package proposes RDY-DIM-010 8 -> 9 for later promotion-owner review."
+      ],
+      "mustNotClaim": [
+        "Final readiness-register mutation has happened.",
+        "Production rollout approval is granted by FEAT-166."
+      ],
+      "blockingResultCodes": [
+        "GCH-DIRECT-REGISTER-MUTATION",
+        "GCH-PRODUCTION-APPROVAL-OVERCLAIM"
+      ]
+    }
+  ]
+}

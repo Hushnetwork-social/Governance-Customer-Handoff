@@ -34,6 +34,7 @@ catalogs/
   responsibility-domain-catalog.json
   non-claim-catalog.json
   external-prerequisite-routing-catalog.json
+  result-code-catalog.json
 examples/
   release-baseline/
     governance-customer-handoff-source.json

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": "governance-customer-handoff-result-code-catalog/v1",
+  "featureId": "FEAT-166",
+  "resultCodes": [
+    {
+      "code": "GCH-ACCEPTED",
+      "severity": "accepted",
+      "description": "The public-safe handoff source and package satisfy all deterministic validation gates."
+    },
+    {
+      "code": "GCH-WARNING-RESTRICTED-REF-ONLY",
+      "severity": "warning",
+      "description": "A restricted evidence id is present as a no-payload reference and remains public-safe."
+    },
+    {
+      "code": "GCH-LIMITED-EXTERNAL-BOUNDARY",
+      "severity": "limited",
+      "description": "The package routes an external prerequisite and does not claim it is complete."
+    },
+    {
+      "code": "GCH-MISSING-HUSH-TECHNICAL-REF",
+      "severity": "blocking",
+      "description": "A required Hush technical proof or package ref is missing."
+    },
+    {
+      "code": "GCH-HUSH-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims Hush authority beyond technical proof packaging."
+    },
+    {
+      "code": "GCH-CUSTOMER-ANSWER-PUBLISHED",
+      "severity": "blocking",
+      "description": "A customer checklist answer or customer-specific governance payload appears in public output."
+    },
+    {
+      "code": "GCH-CUSTOMER-DECISION-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims to make or validate customer governance decisions."
+    },
+    {
+      "code": "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims an external prerequisite is complete or accepted."
+    },
+    {
+      "code": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims public or state election readiness is resolved."
+    },
+    {
+      "code": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims external auditor acceptance."
+    },
+    {
+      "code": "GCH-AUDITOR-NOTE-PUBLISHED",
+      "severity": "blocking",
+      "description": "External auditor notes appear in public output."
+    },
+    {
+      "code": "GCH-DIRECT-REGISTER-MUTATION",
+      "severity": "blocking",
+      "description": "The package directly mutates or authorizes mutation of the readiness register."
+    },
+    {
+      "code": "GCH-PRODUCTION-APPROVAL-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims production rollout approval."
+    },
+    {
+      "code": "GCH-LEGAL-SUFFICIENCY-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims legal sufficiency or legal advice."
+    },
+    {
+      "code": "GCH-AGM-MANAGEMENT-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims AGM management completion."
+    },
+    {
+      "code": "GCH-CERTIFICATION-OVERCLAIM",
+      "severity": "blocking",
+      "description": "The package claims certification."
+    },
+    {
+      "code": "GCH-PRIVATE-MATERIAL-PUBLISHED",
+      "severity": "blocking",
+      "description": "Restricted customer, legal, governance, voter, trustee, credential, private-path, or reviewer material appears in public output."
+    },
+    {
+      "code": "GCH-SCORE-PROPOSAL-MISMATCH",
+      "severity": "blocking",
+      "description": "The package proposes anything other than RDY-DIM-010 8 -> 9."
+    },
+    {
+      "code": "GCH-UPSTREAM-REF-STALE",
+      "severity": "blocking",
+      "description": "A required upstream feature ref is stale, blocked, superseded, missing, or unknown."
+    }
+  ]
+}

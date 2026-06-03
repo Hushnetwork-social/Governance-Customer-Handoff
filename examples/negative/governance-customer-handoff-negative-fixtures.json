@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "governance-customer-handoff-negative-fixtures/v1",
+  "featureId": "FEAT-166",
+  "fixtures": [
+    {
+      "caseId": "GCH-NEG-LEGAL-SUFFICIENCY-OVERCLAIM",
+      "description": "Reject wording that claims legal sufficiency or legal advice.",
+      "expectedResultCode": "GCH-LEGAL-SUFFICIENCY-OVERCLAIM",
+      "mutation": {
+        "nonClaimBoundaries": [
+          {
+            "category": "legal-sufficiency",
+            "forbiddenClaimPresent": true
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "GCH-NEG-PUBLIC-STATE-READINESS-OVERCLAIM",
+      "description": "Reject any claim that public or state election readiness is resolved by FEAT-166.",
+      "expectedResultCode": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
+      "mutation": {
+        "externalPrerequisiteRouting": {
+          "publicStateReadinessResolvedByFeat166": true
+        }
+      }
+    },
+    {
+      "caseId": "GCH-NEG-CUSTOMER-ANSWER-PUBLISHED",
+      "description": "Reject public output that contains customer checklist answers.",
+      "expectedResultCode": "GCH-CUSTOMER-ANSWER-PUBLISHED",
+      "mutation": {
+        "customerChecklist": {
+          "customerAnswersPublished": true
+        }
+      }
+    },
+    {
+      "caseId": "GCH-NEG-AUDITOR-ACCEPTANCE-OVERCLAIM",
+      "description": "Reject any claim that external auditor acceptance has been granted.",
+      "expectedResultCode": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",
+      "mutation": {
+        "nonClaimBoundaries": [
+          {
+            "category": "external-audit-acceptance",
+            "forbiddenClaimPresent": true
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "GCH-NEG-MISSING-UPSTREAM-REF",
+      "description": "Reject sources that omit any required upstream feature ref.",
+      "expectedResultCode": "GCH-UPSTREAM-REF-STALE",
+      "mutation": {
+        "removeUpstreamEvidenceFeatureId": "FEAT-165"
+      }
+    },
+    {
+      "caseId": "GCH-NEG-DIRECT-REGISTER-MUTATION",
+      "description": "Reject direct readiness-register mutation.",
+      "expectedResultCode": "GCH-DIRECT-REGISTER-MUTATION",
+      "mutation": {
+        "scoreProposal": {
+          "directRegisterMutation": true
+        }
+      }
+    },
+    {
+      "caseId": "GCH-NEG-SCORE-PROPOSAL-MISMATCH",
+      "description": "Reject any score proposal other than RDY-DIM-010 8 -> 9.",
+      "expectedResultCode": "GCH-SCORE-PROPOSAL-MISMATCH",
+      "mutation": {
+        "scoreProposal": {
+          "dimension": "RDY-DIM-010",
+          "movement": "9 -> 10",
+          "directRegisterMutation": false
+        }
+      }
+    },
+    {
+      "caseId": "GCH-NEG-RESTRICTED-PAYLOAD-PUBLISHED",
+      "description": "Reject public output that includes restricted reviewer payload material.",
+      "expectedResultCode": "GCH-PRIVATE-MATERIAL-PUBLISHED",
+      "mutation": {
+        "restrictedEvidencePolicy": {
+          "payloadsPublishedHere": true
+        }
+      }
+    },
+    {
+      "caseId": "GCH-NEG-CERTIFICATION-OVERCLAIM",
+      "description": "Reject certification claims.",
+      "expectedResultCode": "GCH-CERTIFICATION-OVERCLAIM",
+      "mutation": {
+        "nonClaimBoundaries": [
+          {
+            "category": "certification",
+            "forbiddenClaimPresent": true
+          }
+        ]
+      }
+    },
+    {
+      "caseId": "GCH-NEG-PRODUCTION-APPROVAL-OVERCLAIM",
+      "description": "Reject production rollout approval claims.",
+      "expectedResultCode": "GCH-PRODUCTION-APPROVAL-OVERCLAIM",
+      "mutation": {
+        "nonClaimBoundaries": [
+          {
+            "category": "production-rollout-approval",
+            "forbiddenClaimPresent": true
+          }
+        ]
+      }
+    }
+  ]
+}

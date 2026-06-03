@@ -1,0 +1,443 @@
+{
+  "schemaVersion": "governance-customer-handoff-source/v1",
+  "featureId": "FEAT-166",
+  "readinessBaseline": {
+    "registerVersion": "RDY-REG-v0.1.7",
+    "dimension": "RDY-DIM-010",
+    "blocker": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001",
+    "currentScore": 8,
+    "targetScore": 9,
+    "registerManifestRef": {
+      "id": "RDY-REG-v0.1.7",
+      "source": "readiness-baseline",
+      "ref": "accepted-baseline-v0.1.7",
+      "hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "visibility": "public"
+    }
+  },
+  "upstreamEvidence": [
+    {
+      "featureId": "FEAT-140",
+      "role": "legal-governance-boundary",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-140-boundary-wrapper",
+          "source": "accepted-feature-record",
+          "ref": "feat-140-boundary-wrapper",
+          "hash": "1401401401401401401401401401401401401401401401401401401401401401",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-149",
+      "role": "public-state-prerequisite-routing",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-149-prerequisite-register",
+          "source": "accepted-feature-record",
+          "ref": "feat-149-prerequisite-register",
+          "hash": "1491491491491491491491491491491491491491491491491491491491491491",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-156",
+      "role": "production-rollout-promotion-baseline",
+      "status": "accepted-current",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-156-rdy-reg-v0.1.7",
+          "source": "accepted-feature-record",
+          "ref": "feat-156-rdy-reg-v0.1.7",
+          "hash": "1561561561561561561561561561561561561561561561561561561561561561",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-157",
+      "role": "protocol-spec-proof-traceability",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-157-traceability-package",
+          "source": "public-package-ref",
+          "ref": "feat-157-traceability-package",
+          "hash": "1571571571571571571571571571571571571571571571571571571571571571",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-158",
+      "role": "verifier-sample-tamper-corpus",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-158-verifier-corpus",
+          "source": "public-package-ref",
+          "ref": "feat-158-verifier-corpus",
+          "hash": "1581581581581581581581581581581581581581581581581581581581581581",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-159",
+      "role": "cross-device-receipt-verification",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-159-cross-device-package",
+          "source": "public-package-ref",
+          "ref": "feat-159-cross-device-package",
+          "hash": "1591591591591591591591591591591591591591591591591591591591591591",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-160",
+      "role": "publication-counting-replay",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-160-publication-counting-replay",
+          "source": "Publication-Counting-Replay",
+          "ref": "main",
+          "hash": "1601601601601601601601601601601601601601601601601601601601601601",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-161",
+      "role": "kms-custody-rehearsal",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-161-kms-custody-rehearsal",
+          "source": "Kms-Custody-Rehearsal",
+          "ref": "main",
+          "hash": "1611611611611611611611611611611611611611611611611611611611611611",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-162",
+      "role": "deployment-rollback-rehearsal",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-162-deployment-rollback-rehearsal",
+          "source": "Deployment-Rollback-Rehearsal",
+          "ref": "main",
+          "hash": "1621621621621621621621621621621621621621621621621621621621621621",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-163",
+      "role": "operational-evidence-second-run",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-163-operational-evidence-second-run",
+          "source": "Operational-Evidence-Second-Run",
+          "ref": "main",
+          "hash": "1631631631631631631631631631631631631631631631631631631631631631",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-164",
+      "role": "retention-log-privacy-scans",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-164-retention-log-privacy-scans",
+          "source": "Retention-Log-Privacy-Scans",
+          "ref": "main",
+          "hash": "1641641641641641641641641641641641641641641641641641641641641641",
+          "visibility": "public"
+        }
+      ]
+    },
+    {
+      "featureId": "FEAT-165",
+      "role": "dispute-continuity-matrix",
+      "status": "accepted-input",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "evidenceRefs": [
+        {
+          "id": "FEAT-165-dispute-continuity-matrix",
+          "source": "Dispute-Continuity-Matrix",
+          "ref": "main",
+          "hash": "1651651651651651651651651651651651651651651651651651651651651651",
+          "visibility": "public"
+        }
+      ]
+    }
+  ],
+  "responsibilityDomains": [
+    {
+      "domain": "hush-technical-proof",
+      "ownerClass": "hush",
+      "requiredEvidence": [
+        "accepted technical proof package refs",
+        "hash-bound public package manifests"
+      ],
+      "mayClaim": [
+        "Hush provides technical evidence package refs for reviewer validation."
+      ],
+      "mustNotClaim": [
+        "Hush certifies legal sufficiency.",
+        "Hush grants public/state election readiness."
+      ]
+    },
+    {
+      "domain": "customer-governance",
+      "ownerClass": "customer",
+      "requiredEvidence": [
+        "customer-owned authority review",
+        "customer-owned governance decision"
+      ],
+      "mayClaim": [
+        "Customer governance decisions are customer-owned."
+      ],
+      "mustNotClaim": [
+        "Customer answers are published here.",
+        "Customer governance decisions are made by FEAT-166."
+      ]
+    },
+    {
+      "domain": "external-authority-prerequisite",
+      "ownerClass": "external-authority",
+      "requiredEvidence": [
+        "external prerequisite route id",
+        "visibility boundary"
+      ],
+      "mayClaim": [
+        "External authority prerequisites are routed as external-boundary items."
+      ],
+      "mustNotClaim": [
+        "External authority approval is complete.",
+        "Public/state readiness is resolved by FEAT-166."
+      ]
+    },
+    {
+      "domain": "external-auditor-review",
+      "ownerClass": "external-auditor",
+      "requiredEvidence": [
+        "auditor review route id",
+        "review status visibility marker"
+      ],
+      "mayClaim": [
+        "External auditor review can consume the handoff package."
+      ],
+      "mustNotClaim": [
+        "External audit acceptance is granted by this repository.",
+        "External auditor notes are published here."
+      ]
+    },
+    {
+      "domain": "promotion-owner-action",
+      "ownerClass": "promotion-owner",
+      "requiredEvidence": [
+        "proposal-only readiness fragment",
+        "direct register mutation disabled marker"
+      ],
+      "mayClaim": [
+        "The package proposes RDY-DIM-010 8 -> 9 for later promotion-owner review."
+      ],
+      "mustNotClaim": [
+        "Final readiness-register mutation has happened.",
+        "Production rollout approval is granted by FEAT-166."
+      ]
+    }
+  ],
+  "nonClaimBoundaries": [
+    {
+      "category": "legal-sufficiency",
+      "forbiddenClaim": "The package certifies legal sufficiency or provides legal advice.",
+      "allowedPublicWording": "The package routes legal sufficiency to customer or external legal review.",
+      "blockingResultCode": "GCH-LEGAL-SUFFICIENCY-OVERCLAIM"
+    },
+    {
+      "category": "agm-management",
+      "forbiddenClaim": "The package manages the AGM or confirms meeting governance completion.",
+      "allowedPublicWording": "The package provides a generic governance checklist contract without customer answers.",
+      "blockingResultCode": "GCH-AGM-MANAGEMENT-OVERCLAIM"
+    },
+    {
+      "category": "certification",
+      "forbiddenClaim": "The package certifies the election system or customer process.",
+      "allowedPublicWording": "The package provides public-safe validation inputs for deterministic checker review.",
+      "blockingResultCode": "GCH-CERTIFICATION-OVERCLAIM"
+    },
+    {
+      "category": "external-audit-acceptance",
+      "forbiddenClaim": "The package records external auditor acceptance.",
+      "allowedPublicWording": "The package can be consumed by external auditor review without publishing auditor notes.",
+      "blockingResultCode": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM"
+    },
+    {
+      "category": "public-state-readiness",
+      "forbiddenClaim": "The package resolves public or state election readiness.",
+      "allowedPublicWording": "Public/state readiness remains an external-boundary prerequisite routed through FEAT-149.",
+      "blockingResultCode": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM"
+    },
+    {
+      "category": "production-rollout-approval",
+      "forbiddenClaim": "The package grants production rollout approval.",
+      "allowedPublicWording": "The package supports later promotion-owner review and does not grant rollout approval.",
+      "blockingResultCode": "GCH-PRODUCTION-APPROVAL-OVERCLAIM"
+    },
+    {
+      "category": "customer-governance-decision",
+      "forbiddenClaim": "The package makes or publishes customer governance decisions.",
+      "allowedPublicWording": "Customer governance decisions remain customer-owned and private unless separately approved.",
+      "blockingResultCode": "GCH-CUSTOMER-DECISION-OVERCLAIM"
+    },
+    {
+      "category": "readiness-register-mutation",
+      "forbiddenClaim": "The package mutates the readiness register or claims final 95+ acceptance.",
+      "allowedPublicWording": "The package proposes RDY-DIM-010 8 -> 9 with direct register mutation disabled.",
+      "blockingResultCode": "GCH-DIRECT-REGISTER-MUTATION"
+    }
+  ],
+  "externalPrerequisiteRouting": {
+    "feat149Alignment": true,
+    "publicStateReadinessResolvedByFeat166": false,
+    "routes": [
+      {
+        "routeId": "GCH-ROUTE-CUSTOMER-AUTHORITY-REVIEW",
+        "ownerClass": "customer",
+        "sourceFeature": "FEAT-149",
+        "publicStateReadinessEffect": "external-boundary-only",
+        "evidenceVisibility": "private-only"
+      },
+      {
+        "routeId": "GCH-ROUTE-EXTERNAL-LEGAL-REVIEW",
+        "ownerClass": "external-authority",
+        "sourceFeature": "FEAT-149",
+        "publicStateReadinessEffect": "external-boundary-only",
+        "evidenceVisibility": "restricted-ref-only"
+      },
+      {
+        "routeId": "GCH-ROUTE-AUDITOR-PACKAGE-REVIEW",
+        "ownerClass": "external-auditor",
+        "sourceFeature": "FEAT-166",
+        "publicStateReadinessEffect": "external-boundary-only",
+        "evidenceVisibility": "public"
+      },
+      {
+        "routeId": "GCH-ROUTE-PROMOTION-OWNER-REVIEW",
+        "ownerClass": "promotion-owner",
+        "sourceFeature": "FEAT-156",
+        "publicStateReadinessEffect": "external-boundary-only",
+        "evidenceVisibility": "public"
+      }
+    ]
+  },
+  "customerChecklist": {
+    "genericQuestionsOnly": true,
+    "customerAnswersPublished": false,
+    "sections": [
+      {
+        "sectionId": "GCH-CHECKLIST-AUTHORITY",
+        "questionClass": "customer-authority-confirmation",
+        "answerPublished": false,
+        "ownerClass": "customer"
+      },
+      {
+        "sectionId": "GCH-CHECKLIST-GOVERNANCE-RULES",
+        "questionClass": "governance-rule-review",
+        "answerPublished": false,
+        "ownerClass": "customer"
+      },
+      {
+        "sectionId": "GCH-CHECKLIST-EXTERNAL-PREREQUISITES",
+        "questionClass": "external-prerequisite-review",
+        "answerPublished": false,
+        "ownerClass": "external-authority"
+      },
+      {
+        "sectionId": "GCH-CHECKLIST-AUDITOR-ROUTING",
+        "questionClass": "auditor-review-routing",
+        "answerPublished": false,
+        "ownerClass": "external-auditor"
+      },
+      {
+        "sectionId": "GCH-CHECKLIST-PROMOTION-OWNER",
+        "questionClass": "promotion-owner-readiness-review",
+        "answerPublished": false,
+        "ownerClass": "promotion-owner"
+      }
+    ]
+  },
+  "publicBoundary": {
+    "allowedPublicMaterials": [
+      "stable ids",
+      "branch names",
+      "commit hashes",
+      "manifest hashes",
+      "artifact hashes",
+      "generic catalogs",
+      "sanitized examples",
+      "public-safe summaries"
+    ],
+    "forbiddenPublicMaterials": [
+      "customer_legal_document",
+      "customer_checklist_answer",
+      "authority_name",
+      "signoff_record",
+      "external_auditor_note",
+      "public_authority_correspondence",
+      "restricted_reviewer_payload",
+      "voter_material",
+      "trustee_threshold_material",
+      "secret",
+      "credential",
+      "private_path",
+      "customer_specific_governance_detail"
+    ],
+    "publicOnlyValidation": true
+  },
+  "scoreProposal": {
+    "dimension": "RDY-DIM-010",
+    "movement": "8 -> 9",
+    "directRegisterMutation": false
+  },
+  "restrictedEvidencePolicy": {
+    "publicRefsOnly": true,
+    "payloadsPublishedHere": false,
+    "restrictedEvidenceRefs": [
+      {
+        "id": "restricted-customer-governance-ref-placeholder",
+        "visibility": "restricted-ref-only",
+        "expectedHash": "2222222222222222222222222222222222222222222222222222222222222222",
+        "payloadPublished": false,
+        "note": "Placeholder no-payload restricted ref for private customer-owned evidence."
+      }
+    ]
+  }
+}
