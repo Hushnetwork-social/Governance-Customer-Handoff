@@ -1,0 +1,71 @@
+{
+  "blocker": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001",
+  "canonicalRegisterMutationPerformed": false,
+  "claimEffect": "proposes RDY-DIM-010 8 -> 9 for later promotion-owner review only",
+  "currentScore": 8,
+  "dimension": "RDY-DIM-010",
+  "directRegisterMutation": false,
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "movement": "8 -> 9",
+  "nonClaims": {
+    "agmManagementClaimed": false,
+    "certificationClaimed": false,
+    "customerGovernanceDecisionClaimed": false,
+    "directReadinessRegisterMutationClaimed": false,
+    "externalAuditAcceptanceClaimed": false,
+    "legalSufficiencyClaimed": false,
+    "productionRolloutApprovalClaimed": false,
+    "publicStateReadinessClaimed": false
+  },
+  "packageId": "FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001",
+  "promotionOwnerRequired": true,
+  "proposalOnly": true,
+  "proposedScore": 9,
+  "readinessFragmentRef": {
+    "description": "FEAT-130-compatible proposal-only readiness fragment.",
+    "path": "readiness/governance-customer-handoff-readiness-fragment.json",
+    "sha256": "4252c9d9b8a1cde0b835404a3f05ffc792a0a56b121a8d919dcad1ea5383946b",
+    "visibility": "public"
+  },
+  "readinessRegisterVersion": "RDY-REG-v0.1.7",
+  "schemaVersion": "governance-customer-handoff-score-proposal/v1",
+  "status": "proposal_only",
+  "supportingRefs": [
+    {
+      "path": "validation/readiness-baseline-currentness-summary.json",
+      "sha256": "b98d9092556e893df113c081c873c473d7f86a832bc11a06d997e945a0f84aa9",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/upstream-evidence-currentness-summary.json",
+      "sha256": "e4cfccaaf4d77ebeddae6c4bebb44335fba0072d40dd38b25a4fa17d73cec69a",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/responsibility-matrix-summary.json",
+      "sha256": "7756500be3566eda963206d0740f71da58653562e5f35c5426d3d1ebad8d4782",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/non-claim-boundary-summary.json",
+      "sha256": "121534b297ec1badc31a95eacceae4ba33d3aed8153d52bc985c59163f47fe96",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/external-prerequisite-routing-summary.json",
+      "sha256": "126a9ad129d9976d08a5af8ad51b1ef7623a296f8725d2666232cffbb7b0f153",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/customer-checklist-boundary-summary.json",
+      "sha256": "0f17f47bcb2481685bada1b8722ebe02e571409123ecd0be45850298ca06bfbb",
+      "visibility": "public"
+    },
+    {
+      "path": "readiness/governance-customer-handoff-readiness-fragment.json",
+      "sha256": "4252c9d9b8a1cde0b835404a3f05ffc792a0a56b121a8d919dcad1ea5383946b",
+      "visibility": "public"
+    }
+  ]
+}

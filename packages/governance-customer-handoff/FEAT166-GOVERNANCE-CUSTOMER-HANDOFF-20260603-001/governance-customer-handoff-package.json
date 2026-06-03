@@ -2,8 +2,15 @@
   "claimBoundary": "technical evidence and proposal-only readiness package; customer governance, legal sufficiency, certification, public/state readiness, auditor acceptance, and register mutation remain outside FEAT-166",
   "featureId": "FEAT-166",
   "generatedAt": "2026-06-03T12:00:00Z",
+  "handoffArtifacts": [
+    "handoff/governance-customer-handoff-downstream-handoff.json"
+  ],
   "packageId": "FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001",
   "publicOnlyValidation": true,
+  "readinessArtifacts": [
+    "readiness/governance-customer-handoff-readiness-fragment.json",
+    "readiness/governance-customer-handoff-score-proposal.json"
+  ],
   "readinessBaseline": {
     "blocker": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001",
     "currentScore": 8,

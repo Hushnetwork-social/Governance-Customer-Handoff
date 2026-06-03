@@ -1,0 +1,74 @@
+{
+  "acceptedGates": [
+    "readiness-baseline-current",
+    "upstream-evidence-current",
+    "responsibility-matrix-complete",
+    "non-claim-boundaries-enforced",
+    "external-prerequisite-routing-fail-closed",
+    "customer-checklist-public-boundary-accepted"
+  ],
+  "blocker": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001",
+  "currentScore": 8,
+  "dimension": "RDY-DIM-010",
+  "directRegisterMutation": false,
+  "evidenceRefs": [
+    {
+      "path": "validation/readiness-baseline-currentness-summary.json",
+      "sha256": "b98d9092556e893df113c081c873c473d7f86a832bc11a06d997e945a0f84aa9",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/upstream-evidence-currentness-summary.json",
+      "sha256": "e4cfccaaf4d77ebeddae6c4bebb44335fba0072d40dd38b25a4fa17d73cec69a",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/responsibility-matrix-summary.json",
+      "sha256": "7756500be3566eda963206d0740f71da58653562e5f35c5426d3d1ebad8d4782",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/non-claim-boundary-summary.json",
+      "sha256": "121534b297ec1badc31a95eacceae4ba33d3aed8153d52bc985c59163f47fe96",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/external-prerequisite-routing-summary.json",
+      "sha256": "126a9ad129d9976d08a5af8ad51b1ef7623a296f8725d2666232cffbb7b0f153",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/customer-checklist-boundary-summary.json",
+      "sha256": "0f17f47bcb2481685bada1b8722ebe02e571409123ecd0be45850298ca06bfbb",
+      "visibility": "public"
+    }
+  ],
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "movement": "8 -> 9",
+  "nonClaims": {
+    "agmManagementClaimed": false,
+    "certificationClaimed": false,
+    "customerGovernanceDecisionClaimed": false,
+    "directReadinessRegisterMutationClaimed": false,
+    "externalAuditAcceptanceClaimed": false,
+    "legalSufficiencyClaimed": false,
+    "productionRolloutApprovalClaimed": false,
+    "publicStateReadinessClaimed": false
+  },
+  "packageId": "FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001",
+  "promotionOwnerRequired": true,
+  "proposalOnly": true,
+  "proposedScore": 9,
+  "publicOnlyValidation": true,
+  "readinessRegisterVersion": "RDY-REG-v0.1.7",
+  "residualLimitations": [
+    "Customer governance authority, notices, quorum, proxy, minutes, and remedy decisions remain customer-owned.",
+    "Legal sufficiency remains customer or external legal authority scope.",
+    "Independent certification and external auditor acceptance are not granted by this package.",
+    "Public/state election readiness remains routed through FEAT-149 and external authority prerequisites.",
+    "Canonical readiness-register movement requires later promotion-owner action."
+  ],
+  "schemaVersion": "governance-customer-handoff-readiness-fragment/v1",
+  "status": "accepted_candidate"
+}

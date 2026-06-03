@@ -1,50 +1,48 @@
 {
-  "artifactRefs": [
+  "downstreamTargets": [
     {
-      "path": "README.md",
-      "sha256": "1bc9c46b863892a3f3e49671815a43b9a421d0b90b940cfd3a5bc83682fa0dbc",
-      "visibility": "public"
+      "claimEffect": "does-not-start-rehearsal",
+      "directRegisterMutationAllowed": false,
+      "payloadPublished": false,
+      "requiredAction": "Use the public package and no-payload restricted refs as reviewer inputs before any controlled rehearsal claim is expanded.",
+      "targetId": "local-rehearsal"
     },
     {
-      "path": "schemas/governance-customer-handoff-source.schema.json",
-      "sha256": "89c13530d0163e9ad14bb69f9470d897df72dd3454ab419c5a582a5654c1f53d",
-      "visibility": "public"
+      "claimEffect": "does-not-bind-live-election",
+      "directRegisterMutationAllowed": false,
+      "payloadPublished": false,
+      "requiredAction": "Consume the handoff package as static governance/customer context only; live proof binding remains FEAT-143/FEAT-144 scope.",
+      "targetId": "binding-internal-election-proof-validation"
     },
     {
-      "path": "schemas/governance-customer-handoff-package-manifest.schema.json",
-      "sha256": "70910490415e56c3369f0c2564e5a1e2ac493a2b46932ba544b7f520e2347546",
-      "visibility": "public"
+      "claimEffect": "review-consumer-only",
+      "directRegisterMutationAllowed": false,
+      "payloadPublished": false,
+      "requiredAction": "Provide public-safe package refs for auditor review without publishing auditor notes or implying acceptance.",
+      "targetId": "external-auditor-review"
     },
     {
-      "path": "catalogs/responsibility-domain-catalog.json",
-      "sha256": "b0513fd7880535da4e68f84cf9c59dc37eeaecc6d9778f059007ef819a6cbe3b",
-      "visibility": "public"
-    },
-    {
-      "path": "catalogs/non-claim-catalog.json",
-      "sha256": "9fbf06f65f1c3dd2c63c2204bdc5474d975e37bc3b55bee4a221e4ad9173a6b4",
-      "visibility": "public"
-    },
-    {
-      "path": "catalogs/external-prerequisite-routing-catalog.json",
-      "sha256": "908602fd84f076f3a59992a4414d075196acddecfde0e45137d535bd109bd157",
-      "visibility": "public"
-    },
-    {
-      "path": "catalogs/result-code-catalog.json",
-      "sha256": "d3e4f14cd96aac0381aef4571ea9556446464cd310c2bc30c7c8cb38bd09e5d2",
-      "visibility": "public"
-    },
-    {
-      "path": "examples/release-baseline/governance-customer-handoff-source.json",
-      "sha256": "afa359e7d77c42c7a0c9d50a28fee6a26b21380ce3a8b90f4436dbf6ee02db0d",
-      "visibility": "public"
-    },
-    {
-      "path": "examples/negative/governance-customer-handoff-negative-fixtures.json",
-      "sha256": "d7228b3de96243ee709d7cfd5553ec01520a4c12c006adc5656d0352dd531a35",
-      "visibility": "public"
-    },
+      "claimEffect": "promotion-owner-action-required",
+      "directRegisterMutationAllowed": false,
+      "payloadPublished": false,
+      "requiredAction": "Review the proposal-only RDY-DIM-010 8 -> 9 score package before any canonical register movement.",
+      "targetId": "promotion-owner-review"
+    }
+  ],
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "nonClaims": {
+    "agmManagementClaimed": false,
+    "certificationClaimed": false,
+    "customerGovernanceDecisionClaimed": false,
+    "directReadinessRegisterMutationClaimed": false,
+    "externalAuditAcceptanceClaimed": false,
+    "legalSufficiencyClaimed": false,
+    "productionRolloutApprovalClaimed": false,
+    "publicStateReadinessClaimed": false
+  },
+  "packageId": "FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001",
+  "packageRefs": [
     {
       "path": "readiness/governance-customer-handoff-readiness-fragment.json",
       "sha256": "4252c9d9b8a1cde0b835404a3f05ffc792a0a56b121a8d919dcad1ea5383946b",
@@ -54,44 +52,17 @@
       "path": "readiness/governance-customer-handoff-score-proposal.json",
       "sha256": "3ae328d5e5d315beda21b20c144f70e5b465cce715c32ff389d5bada384e79da",
       "visibility": "public"
-    },
-    {
-      "path": "handoff/governance-customer-handoff-downstream-handoff.json",
-      "sha256": "f154c338f60d475f97df7ce9f716c4badf2ee1b664838e04ecabce31aefe25c2",
-      "visibility": "public"
-    },
-    {
-      "path": "governance-customer-handoff-package.json",
-      "sha256": "dd280cefa92d6c70aeba2fbe70172d083aa903f5d1b30ba34847a0d89927a8cc",
-      "visibility": "public"
-    },
-    {
-      "path": "restricted/restricted-evidence-index.schema-note.md",
-      "sha256": "8af3bb30a0c1191374c9f014202fff0016e6536596fbd6955c7e60aaf639fa1c",
-      "visibility": "public"
     }
   ],
-  "featureId": "FEAT-166",
-  "generatedAt": "2026-06-03T12:00:00Z",
-  "handoffRefs": [
-    {
-      "path": "handoff/governance-customer-handoff-downstream-handoff.json",
-      "sha256": "f154c338f60d475f97df7ce9f716c4badf2ee1b664838e04ecabce31aefe25c2",
-      "visibility": "public"
-    }
+  "publicOnlyValidation": true,
+  "residualLimitations": [
+    "Legal sufficiency remains outside FEAT-166.",
+    "Independent certification remains outside FEAT-166.",
+    "AGM management and customer governance decisions remain customer-owned.",
+    "Public/state readiness remains blocked unless external prerequisites are accepted through the appropriate track.",
+    "External auditor acceptance is not represented by this handoff.",
+    "Production rollout approval is not granted by this handoff."
   ],
-  "packageId": "FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001",
-  "readinessProposal": {
-    "dimension": "RDY-DIM-010",
-    "directRegisterMutation": false,
-    "movement": "8 -> 9",
-    "proposalRef": {
-      "description": "Proposal-only readiness score package.",
-      "path": "readiness/governance-customer-handoff-score-proposal.json",
-      "sha256": "3ae328d5e5d315beda21b20c144f70e5b465cce715c32ff389d5bada384e79da",
-      "visibility": "public"
-    }
-  },
   "restrictedEvidenceRefs": [
     {
       "expectedHash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
@@ -171,13 +142,8 @@
       "visibility": "restricted-ref-only"
     }
   ],
-  "schemaVersion": "governance-customer-handoff-package-manifest/v1",
-  "sourceRef": {
-    "description": "Sanitized public release-baseline source.",
-    "path": "examples/release-baseline/governance-customer-handoff-source.json",
-    "sha256": "afa359e7d77c42c7a0c9d50a28fee6a26b21380ce3a8b90f4436dbf6ee02db0d",
-    "visibility": "public"
-  },
+  "schemaVersion": "governance-customer-handoff-downstream-handoff/v1",
+  "status": "handoff_ready",
   "validationRefs": [
     {
       "path": "validation/readiness-baseline-currentness-summary.json",
@@ -207,16 +173,6 @@
     {
       "path": "validation/customer-checklist-boundary-summary.json",
       "sha256": "0f17f47bcb2481685bada1b8722ebe02e571409123ecd0be45850298ca06bfbb",
-      "visibility": "public"
-    },
-    {
-      "path": "validation/public-only-validation-summary.json",
-      "sha256": "15fa2fa81373a6527c624916562a0cbdf52dbe0bcd52147cd8448ba3c1e47be4",
-      "visibility": "public"
-    },
-    {
-      "path": "validation/no-secret-scan-result.json",
-      "sha256": "73e0270f0bd143e5af69b77777ac266c7fad4d1278d1acbea76c295d73d8833f",
       "visibility": "public"
     }
   ]
