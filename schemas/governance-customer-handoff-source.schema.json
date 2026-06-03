@@ -542,7 +542,11 @@
         "ownerClass",
         "sourceFeature",
         "publicStateReadinessEffect",
-        "evidenceVisibility"
+        "evidenceVisibility",
+        "routeStatus",
+        "evidenceRefType",
+        "missingInputBehavior",
+        "evidenceRefs"
       ],
       "properties": {
         "routeId": {
@@ -573,6 +577,31 @@
             "restricted-ref-only",
             "private-only"
           ]
+        },
+        "routeStatus": {
+          "enum": [
+            "blocked-pending-customer-input",
+            "blocked-pending-external-input",
+            "public-package-ready",
+            "proposal-review-ready"
+          ]
+        },
+        "evidenceRefType": {
+          "enum": [
+            "no-payload-restricted-ref",
+            "public-package-ref",
+            "promotion-owner-ref"
+          ]
+        },
+        "missingInputBehavior": {
+          "const": "fail-closed"
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          }
         }
       }
     },
@@ -583,7 +612,12 @@
         "sectionId",
         "questionClass",
         "answerPublished",
-        "ownerClass"
+        "ownerClass",
+        "status",
+        "evidenceRefType",
+        "evidenceVisibility",
+        "missingInputBehavior",
+        "evidenceRefs"
       ],
       "properties": {
         "sectionId": {
@@ -604,6 +638,37 @@
             "external-auditor",
             "promotion-owner"
           ]
+        },
+        "status": {
+          "enum": [
+            "required-private-answer",
+            "required-external-input",
+            "public-package-review",
+            "promotion-owner-review"
+          ]
+        },
+        "evidenceRefType": {
+          "enum": [
+            "no-payload-restricted-ref",
+            "public-package-ref",
+            "promotion-owner-ref"
+          ]
+        },
+        "evidenceVisibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        },
+        "missingInputBehavior": {
+          "const": "fail-closed"
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          }
         }
       }
     },

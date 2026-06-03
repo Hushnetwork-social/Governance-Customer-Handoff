@@ -492,28 +492,76 @@
         "ownerClass": "customer",
         "sourceFeature": "FEAT-149",
         "publicStateReadinessEffect": "external-boundary-only",
-        "evidenceVisibility": "private-only"
+        "evidenceVisibility": "private-only",
+        "routeStatus": "blocked-pending-customer-input",
+        "evidenceRefType": "no-payload-restricted-ref",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-ROUTE-REF-CUSTOMER-AUTHORITY-REVIEW",
+            "source": "customer-owned-governance-record",
+            "ref": "restricted-ref-only/customer-authority-review-placeholder",
+            "hash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "visibility": "restricted-ref-only"
+          }
+        ]
       },
       {
         "routeId": "GCH-ROUTE-EXTERNAL-LEGAL-REVIEW",
         "ownerClass": "external-authority",
         "sourceFeature": "FEAT-149",
         "publicStateReadinessEffect": "external-boundary-only",
-        "evidenceVisibility": "restricted-ref-only"
+        "evidenceVisibility": "restricted-ref-only",
+        "routeStatus": "blocked-pending-external-input",
+        "evidenceRefType": "no-payload-restricted-ref",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-ROUTE-REF-EXTERNAL-LEGAL-REVIEW",
+            "source": "external-legal-authority",
+            "ref": "restricted-ref-only/external-legal-review-placeholder",
+            "hash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+            "visibility": "restricted-ref-only"
+          }
+        ]
       },
       {
         "routeId": "GCH-ROUTE-AUDITOR-PACKAGE-REVIEW",
         "ownerClass": "external-auditor",
         "sourceFeature": "FEAT-166",
         "publicStateReadinessEffect": "external-boundary-only",
-        "evidenceVisibility": "public"
+        "evidenceVisibility": "public",
+        "routeStatus": "public-package-ready",
+        "evidenceRefType": "public-package-ref",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-ROUTE-REF-AUDITOR-PACKAGE-REVIEW",
+            "source": "Governance-Customer-Handoff",
+            "ref": "packages/governance-customer-handoff/FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001/validation/responsibility-matrix-summary.json",
+            "hash": "7756500be3566eda963206d0740f71da58653562e5f35c5426d3d1ebad8d4782",
+            "visibility": "public"
+          }
+        ]
       },
       {
         "routeId": "GCH-ROUTE-PROMOTION-OWNER-REVIEW",
         "ownerClass": "promotion-owner",
         "sourceFeature": "FEAT-156",
         "publicStateReadinessEffect": "external-boundary-only",
-        "evidenceVisibility": "public"
+        "evidenceVisibility": "public",
+        "routeStatus": "proposal-review-ready",
+        "evidenceRefType": "promotion-owner-ref",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-ROUTE-REF-PROMOTION-OWNER-REVIEW",
+            "source": "Governance-Customer-Handoff",
+            "ref": "packages/governance-customer-handoff/FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001/validation/readiness-baseline-currentness-summary.json",
+            "hash": "b98d9092556e893df113c081c873c473d7f86a832bc11a06d997e945a0f84aa9",
+            "visibility": "public"
+          }
+        ]
       }
     ]
   },
@@ -525,31 +573,96 @@
         "sectionId": "GCH-CHECKLIST-AUTHORITY",
         "questionClass": "customer-authority-confirmation",
         "answerPublished": false,
-        "ownerClass": "customer"
+        "ownerClass": "customer",
+        "status": "required-private-answer",
+        "evidenceRefType": "no-payload-restricted-ref",
+        "evidenceVisibility": "restricted-ref-only",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-CHECKLIST-REF-AUTHORITY",
+            "source": "customer-owned-governance-record",
+            "ref": "restricted-ref-only/customer-authority-checklist-placeholder",
+            "hash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+            "visibility": "restricted-ref-only"
+          }
+        ]
       },
       {
         "sectionId": "GCH-CHECKLIST-GOVERNANCE-RULES",
         "questionClass": "governance-rule-review",
         "answerPublished": false,
-        "ownerClass": "customer"
+        "ownerClass": "customer",
+        "status": "required-private-answer",
+        "evidenceRefType": "no-payload-restricted-ref",
+        "evidenceVisibility": "restricted-ref-only",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-CHECKLIST-REF-GOVERNANCE-RULES",
+            "source": "customer-owned-governance-record",
+            "ref": "restricted-ref-only/customer-governance-rules-placeholder",
+            "hash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+            "visibility": "restricted-ref-only"
+          }
+        ]
       },
       {
         "sectionId": "GCH-CHECKLIST-EXTERNAL-PREREQUISITES",
         "questionClass": "external-prerequisite-review",
         "answerPublished": false,
-        "ownerClass": "external-authority"
+        "ownerClass": "external-authority",
+        "status": "required-external-input",
+        "evidenceRefType": "no-payload-restricted-ref",
+        "evidenceVisibility": "restricted-ref-only",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-CHECKLIST-REF-EXTERNAL-PREREQUISITES",
+            "source": "external-authority",
+            "ref": "restricted-ref-only/external-prerequisite-checklist-placeholder",
+            "hash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "visibility": "restricted-ref-only"
+          }
+        ]
       },
       {
         "sectionId": "GCH-CHECKLIST-AUDITOR-ROUTING",
         "questionClass": "auditor-review-routing",
         "answerPublished": false,
-        "ownerClass": "external-auditor"
+        "ownerClass": "external-auditor",
+        "status": "public-package-review",
+        "evidenceRefType": "public-package-ref",
+        "evidenceVisibility": "public",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-CHECKLIST-REF-AUDITOR-ROUTING",
+            "source": "Governance-Customer-Handoff",
+            "ref": "packages/governance-customer-handoff/FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001/validation/non-claim-boundary-summary.json",
+            "hash": "121534b297ec1badc31a95eacceae4ba33d3aed8153d52bc985c59163f47fe96",
+            "visibility": "public"
+          }
+        ]
       },
       {
         "sectionId": "GCH-CHECKLIST-PROMOTION-OWNER",
         "questionClass": "promotion-owner-readiness-review",
         "answerPublished": false,
-        "ownerClass": "promotion-owner"
+        "ownerClass": "promotion-owner",
+        "status": "promotion-owner-review",
+        "evidenceRefType": "promotion-owner-ref",
+        "evidenceVisibility": "public",
+        "missingInputBehavior": "fail-closed",
+        "evidenceRefs": [
+          {
+            "id": "GCH-CHECKLIST-REF-PROMOTION-OWNER",
+            "source": "Governance-Customer-Handoff",
+            "ref": "packages/governance-customer-handoff/FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001/validation/readiness-baseline-currentness-summary.json",
+            "hash": "b98d9092556e893df113c081c873c473d7f86a832bc11a06d997e945a0f84aa9",
+            "visibility": "public"
+          }
+        ]
       }
     ]
   },

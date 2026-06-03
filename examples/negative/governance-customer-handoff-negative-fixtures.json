@@ -36,6 +36,22 @@
       }
     },
     {
+      "caseId": "GCH-NEG-MISSING-EXTERNAL-ROUTE",
+      "description": "Reject sources missing a required external prerequisite route.",
+      "expectedResultCode": "GCH-EXTERNAL-PREREQUISITE-ROUTE-MISSING",
+      "mutation": {
+        "removeExternalRouteId": "GCH-ROUTE-EXTERNAL-LEGAL-REVIEW"
+      }
+    },
+    {
+      "caseId": "GCH-NEG-MISSING-CHECKLIST-SECTION",
+      "description": "Reject sources missing a required generic checklist section.",
+      "expectedResultCode": "GCH-CUSTOMER-CHECKLIST-BOUNDARY-MISSING",
+      "mutation": {
+        "removeChecklistSectionId": "GCH-CHECKLIST-GOVERNANCE-RULES"
+      }
+    },
+    {
       "caseId": "GCH-NEG-AUDITOR-ACCEPTANCE-OVERCLAIM",
       "description": "Reject any claim that external auditor acceptance has been granted.",
       "expectedResultCode": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",

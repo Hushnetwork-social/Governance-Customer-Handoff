@@ -10,6 +10,9 @@
       "sourceFeature": "FEAT-149",
       "publicStateReadinessEffect": "external-boundary-only",
       "evidenceVisibility": "private-only",
+      "routeStatus": "blocked-pending-customer-input",
+      "evidenceRefType": "no-payload-restricted-ref",
+      "missingInputBehavior": "fail-closed",
       "publicSafeSummary": "Customer authority review is required outside the public package."
     },
     {
@@ -18,6 +21,9 @@
       "sourceFeature": "FEAT-149",
       "publicStateReadinessEffect": "external-boundary-only",
       "evidenceVisibility": "restricted-ref-only",
+      "routeStatus": "blocked-pending-external-input",
+      "evidenceRefType": "no-payload-restricted-ref",
+      "missingInputBehavior": "fail-closed",
       "publicSafeSummary": "External legal or public prerequisite review is routed without payload publication."
     },
     {
@@ -26,6 +32,9 @@
       "sourceFeature": "FEAT-166",
       "publicStateReadinessEffect": "external-boundary-only",
       "evidenceVisibility": "public",
+      "routeStatus": "public-package-ready",
+      "evidenceRefType": "public-package-ref",
+      "missingInputBehavior": "fail-closed",
       "publicSafeSummary": "The public package can be consumed by auditor review without representing acceptance."
     },
     {
@@ -34,6 +43,9 @@
       "sourceFeature": "FEAT-156",
       "publicStateReadinessEffect": "external-boundary-only",
       "evidenceVisibility": "public",
+      "routeStatus": "proposal-review-ready",
+      "evidenceRefType": "promotion-owner-ref",
+      "missingInputBehavior": "fail-closed",
       "publicSafeSummary": "The promotion owner reviews the proposal-only readiness package before any register action."
     }
   ]

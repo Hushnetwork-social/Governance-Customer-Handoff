@@ -43,6 +43,11 @@
       "description": "A customer checklist answer or customer-specific governance payload appears in public output."
     },
     {
+      "code": "GCH-CUSTOMER-CHECKLIST-BOUNDARY-MISSING",
+      "severity": "blocking",
+      "description": "A required generic checklist section, owner, evidence ref type, visibility, evidence ref, status, or fail-closed behavior is missing or invalid."
+    },
+    {
       "code": "GCH-CUSTOMER-DECISION-OVERCLAIM",
       "severity": "blocking",
       "description": "The package claims to make or validate customer governance decisions."
@@ -51,6 +56,11 @@
       "code": "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM",
       "severity": "blocking",
       "description": "The package claims an external prerequisite is complete or accepted."
+    },
+    {
+      "code": "GCH-EXTERNAL-PREREQUISITE-ROUTE-MISSING",
+      "severity": "blocking",
+      "description": "A required external prerequisite route, route status, evidence ref type, visibility, evidence ref, or fail-closed behavior is missing or invalid."
     },
     {
       "code": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
