@@ -1,0 +1,70 @@
+{
+  "agmManagementClaimed": false,
+  "boundaries": [
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-LEGAL-SUFFICIENCY-OVERCLAIM",
+      "category": "legal-sufficiency",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-AGM-MANAGEMENT-OVERCLAIM",
+      "category": "agm-management",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-CERTIFICATION-OVERCLAIM",
+      "category": "certification",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",
+      "category": "external-audit-acceptance",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
+      "category": "public-state-readiness",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-PRODUCTION-APPROVAL-OVERCLAIM",
+      "category": "production-rollout-approval",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-CUSTOMER-DECISION-OVERCLAIM",
+      "category": "customer-governance-decision",
+      "forbiddenClaimRejected": true
+    },
+    {
+      "allowedPublicWordingAccepted": true,
+      "blockingResultCode": "GCH-DIRECT-REGISTER-MUTATION",
+      "category": "readiness-register-mutation",
+      "forbiddenClaimRejected": true
+    }
+  ],
+  "boundaryGate": "all forbidden claims remain non-claims; FEAT-166 emits public-safe evidence and proposal artifacts only",
+  "certificationClaimed": false,
+  "customerGovernanceDecisionClaimed": false,
+  "directRegisterMutationClaimed": false,
+  "externalAuditAcceptanceClaimed": false,
+  "featureId": "FEAT-166",
+  "forbiddenClaimsRejected": true,
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "legalSufficiencyClaimed": false,
+  "missingBoundaryCategories": [],
+  "observedBoundaryCount": 8,
+  "productionRolloutApprovalClaimed": false,
+  "publicOnlyValidation": true,
+  "publicStateReadinessClaimed": false,
+  "requiredBoundaryCount": 8,
+  "schemaVersion": "governance-customer-handoff-non-claim-boundary-summary/v1",
+  "status": "accepted"
+}

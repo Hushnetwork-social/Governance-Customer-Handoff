@@ -5,6 +5,10 @@
     {
       "domain": "hush-technical-proof",
       "ownerClass": "hush",
+      "visibility": "public",
+      "nonClaimBoundary": "legal-sufficiency",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "technical-evidence-only",
       "requiredEvidence": [
         "accepted technical proof package refs",
         "hash-bound public package manifests",
@@ -25,8 +29,35 @@
       ]
     },
     {
+      "domain": "hush-operational-evidence",
+      "ownerClass": "hush",
+      "visibility": "public",
+      "nonClaimBoundary": "production-rollout-approval",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "technical-evidence-only",
+      "requiredEvidence": [
+        "accepted operational hardening package refs",
+        "hash-bound public validation summaries"
+      ],
+      "mayClaim": [
+        "Hush provides public-safe operational evidence refs for reviewer validation."
+      ],
+      "mustNotClaim": [
+        "Operational evidence grants production rollout approval.",
+        "Operational evidence replaces customer governance review."
+      ],
+      "blockingResultCodes": [
+        "GCH-MISSING-HUSH-TECHNICAL-REF",
+        "GCH-PRODUCTION-APPROVAL-OVERCLAIM"
+      ]
+    },
+    {
       "domain": "customer-governance",
       "ownerClass": "customer",
+      "visibility": "restricted-ref-only",
+      "nonClaimBoundary": "customer-governance-decision",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "customer-owned-decision",
       "requiredEvidence": [
         "customer-owned authority review",
         "customer-owned governance decision",
@@ -46,28 +77,84 @@
       ]
     },
     {
-      "domain": "external-authority-prerequisite",
-      "ownerClass": "external-authority",
+      "domain": "external-legal-authority",
+      "ownerClass": "external-legal-authority",
+      "visibility": "restricted-ref-only",
+      "nonClaimBoundary": "legal-sufficiency",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "external-boundary-only",
       "requiredEvidence": [
-        "external prerequisite route id",
-        "owner class",
-        "visibility boundary"
+        "external legal prerequisite route id",
+        "visibility boundary",
+        "no-payload restricted ref when applicable"
       ],
       "mayClaim": [
-        "External authority prerequisites are routed and tracked as external-boundary items."
+        "External legal prerequisites are routed and tracked as external-boundary items."
       ],
       "mustNotClaim": [
-        "External authority approval is complete.",
-        "Public/state readiness is resolved by FEAT-166."
+        "External legal approval is complete.",
+        "Legal sufficiency is certified by FEAT-166."
       ],
       "blockingResultCodes": [
-        "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM",
-        "GCH-PUBLIC-STATE-READINESS-OVERCLAIM"
+        "GCH-LEGAL-SUFFICIENCY-OVERCLAIM",
+        "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM"
+      ]
+    },
+    {
+      "domain": "public-state-prerequisite",
+      "ownerClass": "public-state-authority",
+      "visibility": "restricted-ref-only",
+      "nonClaimBoundary": "public-state-readiness",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "external-boundary-only",
+      "requiredEvidence": [
+        "FEAT-149 public/state route id",
+        "external-boundary marker",
+        "public/state readiness non-claim"
+      ],
+      "mayClaim": [
+        "Public/state prerequisites are routed through FEAT-149 and remain external-boundary items."
+      ],
+      "mustNotClaim": [
+        "Public/state election readiness is resolved by FEAT-166.",
+        "A public/state authority has accepted the package."
+      ],
+      "blockingResultCodes": [
+        "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
+        "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM"
+      ]
+    },
+    {
+      "domain": "independent-certification",
+      "ownerClass": "independent-certifier",
+      "visibility": "restricted-ref-only",
+      "nonClaimBoundary": "certification",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "external-boundary-only",
+      "requiredEvidence": [
+        "independent certification route id",
+        "certification non-claim",
+        "no-payload restricted ref when applicable"
+      ],
+      "mayClaim": [
+        "Independent certification is an external prerequisite route and not a package result."
+      ],
+      "mustNotClaim": [
+        "Independent certification is granted by FEAT-166.",
+        "The system is certified by this public package."
+      ],
+      "blockingResultCodes": [
+        "GCH-CERTIFICATION-OVERCLAIM",
+        "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM"
       ]
     },
     {
       "domain": "external-auditor-review",
       "ownerClass": "external-auditor",
+      "visibility": "restricted-ref-only",
+      "nonClaimBoundary": "external-audit-acceptance",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "review-consumer-only",
       "requiredEvidence": [
         "auditor review route id",
         "no-payload reviewer ref when applicable",
@@ -88,6 +175,10 @@
     {
       "domain": "promotion-owner-action",
       "ownerClass": "promotion-owner",
+      "visibility": "public",
+      "nonClaimBoundary": "readiness-register-mutation",
+      "missingInputBehavior": "fail-closed",
+      "claimEffect": "proposal-only",
       "requiredEvidence": [
         "proposal-only readiness fragment",
         "score proposal package",

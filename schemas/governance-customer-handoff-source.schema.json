@@ -126,7 +126,7 @@
     },
     "responsibilityDomains": {
       "type": "array",
-      "minItems": 5,
+      "minItems": 8,
       "items": {
         "$ref": "#/$defs/responsibilityDomain"
       }
@@ -403,6 +403,11 @@
         "domain",
         "ownerClass",
         "requiredEvidence",
+        "evidenceRefs",
+        "visibility",
+        "nonClaimBoundary",
+        "missingInputBehavior",
+        "claimEffect",
         "mayClaim",
         "mustNotClaim"
       ],
@@ -410,8 +415,11 @@
         "domain": {
           "enum": [
             "hush-technical-proof",
+            "hush-operational-evidence",
             "customer-governance",
-            "external-authority-prerequisite",
+            "external-legal-authority",
+            "public-state-prerequisite",
+            "independent-certification",
             "external-auditor-review",
             "promotion-owner-action"
           ]
@@ -421,6 +429,9 @@
             "hush",
             "customer",
             "external-authority",
+            "external-legal-authority",
+            "public-state-authority",
+            "independent-certifier",
             "external-auditor",
             "promotion-owner"
           ]
@@ -432,6 +443,43 @@
             "type": "string",
             "minLength": 1
           }
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          }
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        },
+        "nonClaimBoundary": {
+          "enum": [
+            "legal-sufficiency",
+            "agm-management",
+            "certification",
+            "external-audit-acceptance",
+            "public-state-readiness",
+            "production-rollout-approval",
+            "customer-governance-decision",
+            "readiness-register-mutation"
+          ]
+        },
+        "missingInputBehavior": {
+          "const": "fail-closed"
+        },
+        "claimEffect": {
+          "enum": [
+            "technical-evidence-only",
+            "customer-owned-decision",
+            "external-boundary-only",
+            "review-consumer-only",
+            "proposal-only"
+          ]
         },
         "mayClaim": {
           "type": "array",

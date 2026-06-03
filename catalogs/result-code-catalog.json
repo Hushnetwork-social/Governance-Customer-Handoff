@@ -23,6 +23,16 @@
       "description": "A required Hush technical proof or package ref is missing."
     },
     {
+      "code": "GCH-RESPONSIBILITY-DOMAIN-MISSING",
+      "severity": "blocking",
+      "description": "A required responsibility domain, owner, visibility, evidence ref, non-claim boundary, missing-input behavior, or claim-effect field is missing or invalid."
+    },
+    {
+      "code": "GCH-NON-CLAIM-MISSING",
+      "severity": "blocking",
+      "description": "A required non-claim boundary category, forbidden claim, allowed public wording, or blocking result code is missing or invalid."
+    },
+    {
       "code": "GCH-HUSH-OVERCLAIM",
       "severity": "blocking",
       "description": "The package claims Hush authority beyond technical proof packaging."

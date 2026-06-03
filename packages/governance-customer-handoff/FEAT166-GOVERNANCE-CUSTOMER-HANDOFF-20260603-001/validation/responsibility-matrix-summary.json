@@ -1,0 +1,106 @@
+{
+  "allRefsHashBound": true,
+  "allRefsPublicSafe": true,
+  "allRowsHaveEvidenceRefs": true,
+  "claimEffectGate": "technical evidence, customer decisions, external prerequisites, auditor review, and promotion-owner action remain separated",
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "missingInputFailsClosed": true,
+  "missingRows": [],
+  "observedRowCount": 8,
+  "ownerSeparationAccepted": true,
+  "publicOnlyValidation": true,
+  "requiredRowCount": 8,
+  "rows": [
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "technical-evidence-only",
+      "domain": "hush-technical-proof",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "legal-sufficiency",
+      "ownerClass": "hush",
+      "visibility": "public"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "technical-evidence-only",
+      "domain": "hush-operational-evidence",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "production-rollout-approval",
+      "ownerClass": "hush",
+      "visibility": "public"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "customer-owned-decision",
+      "domain": "customer-governance",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "customer-governance-decision",
+      "ownerClass": "customer",
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "external-boundary-only",
+      "domain": "external-legal-authority",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "legal-sufficiency",
+      "ownerClass": "external-legal-authority",
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "external-boundary-only",
+      "domain": "public-state-prerequisite",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "public-state-readiness",
+      "ownerClass": "public-state-authority",
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "external-boundary-only",
+      "domain": "independent-certification",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "certification",
+      "ownerClass": "independent-certifier",
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "review-consumer-only",
+      "domain": "external-auditor-review",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "external-audit-acceptance",
+      "ownerClass": "external-auditor",
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "claimEffect": "proposal-only",
+      "domain": "promotion-owner-action",
+      "evidenceRefCount": 1,
+      "missingInputBehavior": "fail-closed",
+      "nonClaimBoundary": "readiness-register-mutation",
+      "ownerClass": "promotion-owner",
+      "visibility": "public"
+    }
+  ],
+  "schemaVersion": "governance-customer-handoff-responsibility-matrix-summary/v1",
+  "status": "accepted"
+}
