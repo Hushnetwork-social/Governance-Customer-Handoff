@@ -1,0 +1,202 @@
+{
+  "artifactRefs": [
+    {
+      "path": "README.md",
+      "sha256": "1bc9c46b863892a3f3e49671815a43b9a421d0b90b940cfd3a5bc83682fa0dbc",
+      "visibility": "public"
+    },
+    {
+      "path": "schemas/governance-customer-handoff-source.schema.json",
+      "sha256": "89c13530d0163e9ad14bb69f9470d897df72dd3454ab419c5a582a5654c1f53d",
+      "visibility": "public"
+    },
+    {
+      "path": "schemas/governance-customer-handoff-package-manifest.schema.json",
+      "sha256": "70910490415e56c3369f0c2564e5a1e2ac493a2b46932ba544b7f520e2347546",
+      "visibility": "public"
+    },
+    {
+      "path": "catalogs/responsibility-domain-catalog.json",
+      "sha256": "b0513fd7880535da4e68f84cf9c59dc37eeaecc6d9778f059007ef819a6cbe3b",
+      "visibility": "public"
+    },
+    {
+      "path": "catalogs/non-claim-catalog.json",
+      "sha256": "9fbf06f65f1c3dd2c63c2204bdc5474d975e37bc3b55bee4a221e4ad9173a6b4",
+      "visibility": "public"
+    },
+    {
+      "path": "catalogs/external-prerequisite-routing-catalog.json",
+      "sha256": "908602fd84f076f3a59992a4414d075196acddecfde0e45137d535bd109bd157",
+      "visibility": "public"
+    },
+    {
+      "path": "catalogs/result-code-catalog.json",
+      "sha256": "d3e4f14cd96aac0381aef4571ea9556446464cd310c2bc30c7c8cb38bd09e5d2",
+      "visibility": "public"
+    },
+    {
+      "path": "examples/release-baseline/governance-customer-handoff-source.json",
+      "sha256": "afa359e7d77c42c7a0c9d50a28fee6a26b21380ce3a8b90f4436dbf6ee02db0d",
+      "visibility": "public"
+    },
+    {
+      "path": "examples/negative/governance-customer-handoff-negative-fixtures.json",
+      "sha256": "d7228b3de96243ee709d7cfd5553ec01520a4c12c006adc5656d0352dd531a35",
+      "visibility": "public"
+    },
+    {
+      "path": "governance-customer-handoff-package.json",
+      "sha256": "b79088344c8c8fc20dfc02df275627d83c27cd0e67a24639f0673671a02a9bee",
+      "visibility": "public"
+    },
+    {
+      "path": "restricted/restricted-evidence-index.schema-note.md",
+      "sha256": "8af3bb30a0c1191374c9f014202fff0016e6536596fbd6955c7e60aaf639fa1c",
+      "visibility": "public"
+    }
+  ],
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "handoffRefs": [],
+  "packageId": "FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-20260603-001",
+  "readinessProposal": {
+    "dimension": "RDY-DIM-010",
+    "directRegisterMutation": false,
+    "movement": "8 -> 9",
+    "proposalRef": {
+      "description": "Proposal-only readiness currentness summary.",
+      "path": "validation/readiness-baseline-currentness-summary.json",
+      "sha256": "b98d9092556e893df113c081c873c473d7f86a832bc11a06d997e945a0f84aa9",
+      "visibility": "public"
+    }
+  },
+  "restrictedEvidenceRefs": [
+    {
+      "expectedHash": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "id": "GCH-CHECKLIST-REF-AUTHORITY",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "id": "GCH-CHECKLIST-REF-EXTERNAL-PREREQUISITES",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "id": "GCH-CHECKLIST-REF-GOVERNANCE-RULES",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "5555555555555555555555555555555555555555555555555555555555555555",
+      "id": "GCH-RESP-CUSTOMER-GOVERNANCE-RESTRICTED-REF",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "9999999999999999999999999999999999999999999999999999999999999999",
+      "id": "GCH-RESP-EXTERNAL-AUDITOR-REVIEW-RESTRICTED-REF",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "6666666666666666666666666666666666666666666666666666666666666666",
+      "id": "GCH-RESP-EXTERNAL-LEGAL-AUTHORITY-RESTRICTED-REF",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "8888888888888888888888888888888888888888888888888888888888888888",
+      "id": "GCH-RESP-INDEPENDENT-CERTIFICATION-RESTRICTED-REF",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "7777777777777777777777777777777777777777777777777777777777777777",
+      "id": "GCH-RESP-PUBLIC-STATE-PREREQUISITE-RESTRICTED-REF",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "id": "GCH-ROUTE-REF-CUSTOMER-AUTHORITY-REVIEW",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "id": "GCH-ROUTE-REF-EXTERNAL-LEGAL-REVIEW",
+      "note": "No-payload restricted ref collected from public-safe FEAT-166 source.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    },
+    {
+      "expectedHash": "2222222222222222222222222222222222222222222222222222222222222222",
+      "id": "restricted-customer-governance-ref-placeholder",
+      "note": "Placeholder no-payload restricted ref for private customer-owned evidence.",
+      "payloadPublished": false,
+      "visibility": "restricted-ref-only"
+    }
+  ],
+  "schemaVersion": "governance-customer-handoff-package-manifest/v1",
+  "sourceRef": {
+    "description": "Sanitized public release-baseline source.",
+    "path": "examples/release-baseline/governance-customer-handoff-source.json",
+    "sha256": "afa359e7d77c42c7a0c9d50a28fee6a26b21380ce3a8b90f4436dbf6ee02db0d",
+    "visibility": "public"
+  },
+  "validationRefs": [
+    {
+      "path": "validation/readiness-baseline-currentness-summary.json",
+      "sha256": "b98d9092556e893df113c081c873c473d7f86a832bc11a06d997e945a0f84aa9",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/upstream-evidence-currentness-summary.json",
+      "sha256": "e4cfccaaf4d77ebeddae6c4bebb44335fba0072d40dd38b25a4fa17d73cec69a",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/responsibility-matrix-summary.json",
+      "sha256": "7756500be3566eda963206d0740f71da58653562e5f35c5426d3d1ebad8d4782",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/non-claim-boundary-summary.json",
+      "sha256": "121534b297ec1badc31a95eacceae4ba33d3aed8153d52bc985c59163f47fe96",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/external-prerequisite-routing-summary.json",
+      "sha256": "126a9ad129d9976d08a5af8ad51b1ef7623a296f8725d2666232cffbb7b0f153",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/customer-checklist-boundary-summary.json",
+      "sha256": "0f17f47bcb2481685bada1b8722ebe02e571409123ecd0be45850298ca06bfbb",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/public-only-validation-summary.json",
+      "sha256": "1db142b67385f423928de7221e3a75a72cb07c9a4818e5b719d6f86379467eb2",
+      "visibility": "public"
+    },
+    {
+      "path": "validation/no-secret-scan-result.json",
+      "sha256": "f9270c8715747765798e9a88424c0f1a0f613fa10f3cb96295f6373388072410",
+      "visibility": "public"
+    }
+  ]
+}

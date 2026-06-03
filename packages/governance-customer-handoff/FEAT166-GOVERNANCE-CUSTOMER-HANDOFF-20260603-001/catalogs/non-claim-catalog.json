@@ -1,0 +1,54 @@
+{
+  "boundaries": [
+    {
+      "allowedPublicWording": "The package identifies technical evidence refs and routes legal sufficiency to customer or external legal review.",
+      "blockingResultCode": "GCH-LEGAL-SUFFICIENCY-OVERCLAIM",
+      "category": "legal-sufficiency",
+      "forbiddenClaim": "The package certifies legal sufficiency or provides legal advice."
+    },
+    {
+      "allowedPublicWording": "The package provides a generic governance checklist contract without customer answers.",
+      "blockingResultCode": "GCH-AGM-MANAGEMENT-OVERCLAIM",
+      "category": "agm-management",
+      "forbiddenClaim": "The package manages the AGM or confirms meeting governance completion."
+    },
+    {
+      "allowedPublicWording": "The package provides public-safe validation inputs for deterministic checker review.",
+      "blockingResultCode": "GCH-CERTIFICATION-OVERCLAIM",
+      "category": "certification",
+      "forbiddenClaim": "The package certifies the election system or customer process."
+    },
+    {
+      "allowedPublicWording": "The package can be consumed by external auditor review without publishing auditor notes.",
+      "blockingResultCode": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",
+      "category": "external-audit-acceptance",
+      "forbiddenClaim": "The package records external auditor acceptance."
+    },
+    {
+      "allowedPublicWording": "Public/state readiness remains an external-boundary prerequisite routed through FEAT-149.",
+      "blockingResultCode": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
+      "category": "public-state-readiness",
+      "forbiddenClaim": "The package resolves public or state election readiness."
+    },
+    {
+      "allowedPublicWording": "The package supports later promotion-owner review and does not grant rollout approval.",
+      "blockingResultCode": "GCH-PRODUCTION-APPROVAL-OVERCLAIM",
+      "category": "production-rollout-approval",
+      "forbiddenClaim": "The package grants production rollout approval."
+    },
+    {
+      "allowedPublicWording": "Customer governance decisions remain customer-owned and private unless separately approved.",
+      "blockingResultCode": "GCH-CUSTOMER-DECISION-OVERCLAIM",
+      "category": "customer-governance-decision",
+      "forbiddenClaim": "The package makes or publishes customer governance decisions."
+    },
+    {
+      "allowedPublicWording": "The package proposes RDY-DIM-010 8 -> 9 with direct register mutation disabled.",
+      "blockingResultCode": "GCH-DIRECT-REGISTER-MUTATION",
+      "category": "readiness-register-mutation",
+      "forbiddenClaim": "The package mutates the readiness register or claims final 95+ acceptance."
+    }
+  ],
+  "featureId": "FEAT-166",
+  "schemaVersion": "governance-customer-handoff-non-claim-catalog/v1"
+}

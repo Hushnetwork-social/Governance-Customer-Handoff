@@ -1,0 +1,184 @@
+{
+  "$defs": {
+    "artifactRef": {
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "path": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        }
+      },
+      "required": [
+        "path",
+        "sha256",
+        "visibility"
+      ],
+      "type": "object"
+    },
+    "noPayloadRestrictedRef": {
+      "additionalProperties": false,
+      "properties": {
+        "expectedHash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "payloadPublished": {
+          "const": false
+        },
+        "visibility": {
+          "const": "restricted-ref-only"
+        }
+      },
+      "required": [
+        "id",
+        "visibility",
+        "payloadPublished"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://github.com/Hushnetwork-social/Governance-Customer-Handoff/schemas/governance-customer-handoff-package-manifest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "not": {
+        "required": [
+          "privatePath"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "rawPayload"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerLegalDocument"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerChecklistAnswer"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "directRegisterMutationAllowed"
+        ]
+      }
+    }
+  ],
+  "properties": {
+    "artifactRefs": {
+      "items": {
+        "$ref": "#/$defs/artifactRef"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "featureId": {
+      "const": "FEAT-166"
+    },
+    "generatedAt": {
+      "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z$",
+      "type": "string"
+    },
+    "handoffRefs": {
+      "items": {
+        "$ref": "#/$defs/artifactRef"
+      },
+      "type": "array"
+    },
+    "packageId": {
+      "pattern": "^FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-[0-9]{8}-[0-9]{3}$",
+      "type": "string"
+    },
+    "readinessProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {
+          "const": "RDY-DIM-010"
+        },
+        "directRegisterMutation": {
+          "const": false
+        },
+        "movement": {
+          "const": "8 -> 9"
+        },
+        "proposalRef": {
+          "$ref": "#/$defs/artifactRef"
+        }
+      },
+      "required": [
+        "dimension",
+        "movement",
+        "directRegisterMutation",
+        "proposalRef"
+      ],
+      "type": "object"
+    },
+    "restrictedEvidenceRefs": {
+      "items": {
+        "$ref": "#/$defs/noPayloadRestrictedRef"
+      },
+      "type": "array"
+    },
+    "schemaVersion": {
+      "const": "governance-customer-handoff-package-manifest/v1"
+    },
+    "sourceRef": {
+      "$ref": "#/$defs/artifactRef"
+    },
+    "validationRefs": {
+      "items": {
+        "$ref": "#/$defs/artifactRef"
+      },
+      "minItems": 1,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "featureId",
+    "packageId",
+    "generatedAt",
+    "sourceRef",
+    "artifactRefs",
+    "validationRefs",
+    "readinessProposal",
+    "handoffRefs",
+    "restrictedEvidenceRefs"
+  ],
+  "title": "Governance Customer Handoff Package Manifest",
+  "type": "object"
+}

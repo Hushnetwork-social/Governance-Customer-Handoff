@@ -1,0 +1,837 @@
+{
+  "$defs": {
+    "checklistSection": {
+      "additionalProperties": false,
+      "properties": {
+        "answerPublished": {
+          "const": false
+        },
+        "evidenceRefType": {
+          "enum": [
+            "no-payload-restricted-ref",
+            "public-package-ref",
+            "promotion-owner-ref"
+          ]
+        },
+        "evidenceRefs": {
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidenceVisibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        },
+        "missingInputBehavior": {
+          "const": "fail-closed"
+        },
+        "ownerClass": {
+          "enum": [
+            "customer",
+            "external-authority",
+            "external-auditor",
+            "promotion-owner"
+          ]
+        },
+        "questionClass": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "sectionId": {
+          "pattern": "^GCH-CHECKLIST-[A-Z0-9-]+$",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "required-private-answer",
+            "required-external-input",
+            "public-package-review",
+            "promotion-owner-review"
+          ]
+        }
+      },
+      "required": [
+        "sectionId",
+        "questionClass",
+        "answerPublished",
+        "ownerClass",
+        "status",
+        "evidenceRefType",
+        "evidenceVisibility",
+        "missingInputBehavior",
+        "evidenceRefs"
+      ],
+      "type": "object"
+    },
+    "externalPrerequisiteRoute": {
+      "additionalProperties": false,
+      "properties": {
+        "evidenceRefType": {
+          "enum": [
+            "no-payload-restricted-ref",
+            "public-package-ref",
+            "promotion-owner-ref"
+          ]
+        },
+        "evidenceRefs": {
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "evidenceVisibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only",
+            "private-only"
+          ]
+        },
+        "missingInputBehavior": {
+          "const": "fail-closed"
+        },
+        "ownerClass": {
+          "enum": [
+            "customer",
+            "external-authority",
+            "external-auditor",
+            "promotion-owner"
+          ]
+        },
+        "publicStateReadinessEffect": {
+          "const": "external-boundary-only"
+        },
+        "routeId": {
+          "pattern": "^GCH-ROUTE-[A-Z0-9-]+$",
+          "type": "string"
+        },
+        "routeStatus": {
+          "enum": [
+            "blocked-pending-customer-input",
+            "blocked-pending-external-input",
+            "public-package-ready",
+            "proposal-review-ready"
+          ]
+        },
+        "sourceFeature": {
+          "enum": [
+            "FEAT-149",
+            "FEAT-156",
+            "FEAT-166"
+          ]
+        }
+      },
+      "required": [
+        "routeId",
+        "ownerClass",
+        "sourceFeature",
+        "publicStateReadinessEffect",
+        "evidenceVisibility",
+        "routeStatus",
+        "evidenceRefType",
+        "missingInputBehavior",
+        "evidenceRefs"
+      ],
+      "type": "object"
+    },
+    "feat140Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-140"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat149Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-149"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat156Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-156"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat157Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-157"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat158Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-158"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat159Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-159"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat160Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-160"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat161Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-161"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat162Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-162"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat163Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-163"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat164Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-164"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "feat165Evidence": {
+      "properties": {
+        "featureId": {
+          "const": "FEAT-165"
+        }
+      },
+      "required": [
+        "featureId"
+      ],
+      "type": "object"
+    },
+    "noPayloadRestrictedRef": {
+      "additionalProperties": false,
+      "properties": {
+        "expectedHash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "note": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "payloadPublished": {
+          "const": false
+        },
+        "visibility": {
+          "const": "restricted-ref-only"
+        }
+      },
+      "required": [
+        "id",
+        "visibility",
+        "payloadPublished"
+      ],
+      "type": "object"
+    },
+    "nonClaimBoundary": {
+      "additionalProperties": false,
+      "properties": {
+        "allowedPublicWording": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "blockingResultCode": {
+          "pattern": "^GCH-[A-Z0-9-]+$",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "legal-sufficiency",
+            "agm-management",
+            "certification",
+            "external-audit-acceptance",
+            "public-state-readiness",
+            "production-rollout-approval",
+            "customer-governance-decision",
+            "readiness-register-mutation"
+          ]
+        },
+        "forbiddenClaim": {
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "required": [
+        "category",
+        "forbiddenClaim",
+        "allowedPublicWording",
+        "blockingResultCode"
+      ],
+      "type": "object"
+    },
+    "publicRef": {
+      "additionalProperties": false,
+      "properties": {
+        "hash": {
+          "pattern": "^[a-f0-9]{64}$",
+          "type": "string"
+        },
+        "id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "ref": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "source": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "source",
+        "ref",
+        "hash"
+      ],
+      "type": "object"
+    },
+    "responsibilityDomain": {
+      "additionalProperties": false,
+      "properties": {
+        "claimEffect": {
+          "enum": [
+            "technical-evidence-only",
+            "customer-owned-decision",
+            "external-boundary-only",
+            "review-consumer-only",
+            "proposal-only"
+          ]
+        },
+        "domain": {
+          "enum": [
+            "hush-technical-proof",
+            "hush-operational-evidence",
+            "customer-governance",
+            "external-legal-authority",
+            "public-state-prerequisite",
+            "independent-certification",
+            "external-auditor-review",
+            "promotion-owner-action"
+          ]
+        },
+        "evidenceRefs": {
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "mayClaim": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "missingInputBehavior": {
+          "const": "fail-closed"
+        },
+        "mustNotClaim": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "nonClaimBoundary": {
+          "enum": [
+            "legal-sufficiency",
+            "agm-management",
+            "certification",
+            "external-audit-acceptance",
+            "public-state-readiness",
+            "production-rollout-approval",
+            "customer-governance-decision",
+            "readiness-register-mutation"
+          ]
+        },
+        "ownerClass": {
+          "enum": [
+            "hush",
+            "customer",
+            "external-authority",
+            "external-legal-authority",
+            "public-state-authority",
+            "independent-certifier",
+            "external-auditor",
+            "promotion-owner"
+          ]
+        },
+        "requiredEvidence": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        }
+      },
+      "required": [
+        "domain",
+        "ownerClass",
+        "requiredEvidence",
+        "evidenceRefs",
+        "visibility",
+        "nonClaimBoundary",
+        "missingInputBehavior",
+        "claimEffect",
+        "mayClaim",
+        "mustNotClaim"
+      ],
+      "type": "object"
+    },
+    "upstreamEvidenceRef": {
+      "additionalProperties": false,
+      "properties": {
+        "evidenceRefs": {
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "featureId": {
+          "enum": [
+            "FEAT-140",
+            "FEAT-149",
+            "FEAT-156",
+            "FEAT-157",
+            "FEAT-158",
+            "FEAT-159",
+            "FEAT-160",
+            "FEAT-161",
+            "FEAT-162",
+            "FEAT-163",
+            "FEAT-164",
+            "FEAT-165"
+          ]
+        },
+        "freshness": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "role": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "accepted-current",
+            "accepted-input",
+            "context-only",
+            "blocked-stale"
+          ]
+        }
+      },
+      "required": [
+        "featureId",
+        "role",
+        "status",
+        "freshness",
+        "evidenceRefs"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "https://github.com/Hushnetwork-social/Governance-Customer-Handoff/schemas/governance-customer-handoff-source.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "not": {
+        "required": [
+          "privatePath"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerLegalDocument"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerChecklistAnswer"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "rawRestrictedPayload"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "secret"
+        ]
+      }
+    }
+  ],
+  "properties": {
+    "customerChecklist": {
+      "additionalProperties": false,
+      "properties": {
+        "customerAnswersPublished": {
+          "const": false
+        },
+        "genericQuestionsOnly": {
+          "const": true
+        },
+        "sections": {
+          "items": {
+            "$ref": "#/$defs/checklistSection"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "genericQuestionsOnly",
+        "customerAnswersPublished",
+        "sections"
+      ],
+      "type": "object"
+    },
+    "externalPrerequisiteRouting": {
+      "additionalProperties": false,
+      "properties": {
+        "feat149Alignment": {
+          "const": true
+        },
+        "publicStateReadinessResolvedByFeat166": {
+          "const": false
+        },
+        "routes": {
+          "items": {
+            "$ref": "#/$defs/externalPrerequisiteRoute"
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "required": [
+        "feat149Alignment",
+        "publicStateReadinessResolvedByFeat166",
+        "routes"
+      ],
+      "type": "object"
+    },
+    "featureId": {
+      "const": "FEAT-166"
+    },
+    "nonClaimBoundaries": {
+      "items": {
+        "$ref": "#/$defs/nonClaimBoundary"
+      },
+      "minItems": 8,
+      "type": "array"
+    },
+    "publicBoundary": {
+      "additionalProperties": false,
+      "properties": {
+        "allowedPublicMaterials": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "forbiddenPublicMaterials": {
+          "items": {
+            "enum": [
+              "customer_legal_document",
+              "customer_checklist_answer",
+              "authority_name",
+              "signoff_record",
+              "external_auditor_note",
+              "public_authority_correspondence",
+              "restricted_reviewer_payload",
+              "voter_material",
+              "trustee_threshold_material",
+              "secret",
+              "credential",
+              "private_path",
+              "customer_specific_governance_detail"
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "publicOnlyValidation": {
+          "const": true
+        }
+      },
+      "required": [
+        "allowedPublicMaterials",
+        "forbiddenPublicMaterials",
+        "publicOnlyValidation"
+      ],
+      "type": "object"
+    },
+    "readinessBaseline": {
+      "additionalProperties": false,
+      "properties": {
+        "blocker": {
+          "const": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001"
+        },
+        "currentScore": {
+          "const": 8
+        },
+        "dimension": {
+          "const": "RDY-DIM-010"
+        },
+        "registerManifestRef": {
+          "$ref": "#/$defs/publicRef"
+        },
+        "registerVersion": {
+          "const": "RDY-REG-v0.1.7"
+        },
+        "targetScore": {
+          "const": 9
+        }
+      },
+      "required": [
+        "registerVersion",
+        "dimension",
+        "blocker",
+        "currentScore",
+        "targetScore"
+      ],
+      "type": "object"
+    },
+    "responsibilityDomains": {
+      "items": {
+        "$ref": "#/$defs/responsibilityDomain"
+      },
+      "minItems": 8,
+      "type": "array"
+    },
+    "restrictedEvidencePolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "payloadsPublishedHere": {
+          "const": false
+        },
+        "publicRefsOnly": {
+          "const": true
+        },
+        "restrictedEvidenceRefs": {
+          "items": {
+            "$ref": "#/$defs/noPayloadRestrictedRef"
+          },
+          "type": "array"
+        }
+      },
+      "required": [
+        "publicRefsOnly",
+        "payloadsPublishedHere"
+      ],
+      "type": "object"
+    },
+    "schemaVersion": {
+      "const": "governance-customer-handoff-source/v1"
+    },
+    "scoreProposal": {
+      "additionalProperties": false,
+      "properties": {
+        "dimension": {
+          "const": "RDY-DIM-010"
+        },
+        "directRegisterMutation": {
+          "const": false
+        },
+        "movement": {
+          "const": "8 -> 9"
+        }
+      },
+      "required": [
+        "dimension",
+        "movement",
+        "directRegisterMutation"
+      ],
+      "type": "object"
+    },
+    "upstreamEvidence": {
+      "allOf": [
+        {
+          "contains": {
+            "$ref": "#/$defs/feat140Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat149Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat156Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat157Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat158Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat159Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat160Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat161Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat162Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat163Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat164Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat165Evidence"
+          }
+        }
+      ],
+      "items": {
+        "$ref": "#/$defs/upstreamEvidenceRef"
+      },
+      "minItems": 12,
+      "type": "array"
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "featureId",
+    "readinessBaseline",
+    "upstreamEvidence",
+    "responsibilityDomains",
+    "nonClaimBoundaries",
+    "externalPrerequisiteRouting",
+    "customerChecklist",
+    "publicBoundary",
+    "scoreProposal",
+    "restrictedEvidencePolicy"
+  ],
+  "title": "Governance Customer Handoff Source",
+  "type": "object"
+}

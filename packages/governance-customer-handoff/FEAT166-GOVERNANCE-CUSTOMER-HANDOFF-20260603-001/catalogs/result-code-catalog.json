@@ -1,0 +1,121 @@
+{
+  "featureId": "FEAT-166",
+  "resultCodes": [
+    {
+      "code": "GCH-ACCEPTED",
+      "description": "The public-safe handoff source and package satisfy all deterministic validation gates.",
+      "severity": "accepted"
+    },
+    {
+      "code": "GCH-WARNING-RESTRICTED-REF-ONLY",
+      "description": "A restricted evidence id is present as a no-payload reference and remains public-safe.",
+      "severity": "warning"
+    },
+    {
+      "code": "GCH-LIMITED-EXTERNAL-BOUNDARY",
+      "description": "The package routes an external prerequisite and does not claim it is complete.",
+      "severity": "limited"
+    },
+    {
+      "code": "GCH-MISSING-HUSH-TECHNICAL-REF",
+      "description": "A required Hush technical proof or package ref is missing.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-RESPONSIBILITY-DOMAIN-MISSING",
+      "description": "A required responsibility domain, owner, visibility, evidence ref, non-claim boundary, missing-input behavior, or claim-effect field is missing or invalid.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-NON-CLAIM-MISSING",
+      "description": "A required non-claim boundary category, forbidden claim, allowed public wording, or blocking result code is missing or invalid.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-HUSH-OVERCLAIM",
+      "description": "The package claims Hush authority beyond technical proof packaging.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-CUSTOMER-ANSWER-PUBLISHED",
+      "description": "A customer checklist answer or customer-specific governance payload appears in public output.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-CUSTOMER-CHECKLIST-BOUNDARY-MISSING",
+      "description": "A required generic checklist section, owner, evidence ref type, visibility, evidence ref, status, or fail-closed behavior is missing or invalid.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-CUSTOMER-DECISION-OVERCLAIM",
+      "description": "The package claims to make or validate customer governance decisions.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-EXTERNAL-PREREQUISITE-OVERCLAIM",
+      "description": "The package claims an external prerequisite is complete or accepted.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-EXTERNAL-PREREQUISITE-ROUTE-MISSING",
+      "description": "A required external prerequisite route, route status, evidence ref type, visibility, evidence ref, or fail-closed behavior is missing or invalid.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-PUBLIC-STATE-READINESS-OVERCLAIM",
+      "description": "The package claims public or state election readiness is resolved.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-AUDITOR-ACCEPTANCE-OVERCLAIM",
+      "description": "The package claims external auditor acceptance.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-AUDITOR-NOTE-PUBLISHED",
+      "description": "External auditor notes appear in public output.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-DIRECT-REGISTER-MUTATION",
+      "description": "The package directly mutates or authorizes mutation of the readiness register.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-PRODUCTION-APPROVAL-OVERCLAIM",
+      "description": "The package claims production rollout approval.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-LEGAL-SUFFICIENCY-OVERCLAIM",
+      "description": "The package claims legal sufficiency or legal advice.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-AGM-MANAGEMENT-OVERCLAIM",
+      "description": "The package claims AGM management completion.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-CERTIFICATION-OVERCLAIM",
+      "description": "The package claims certification.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-PRIVATE-MATERIAL-PUBLISHED",
+      "description": "Restricted customer, legal, governance, voter, trustee, credential, private-path, or reviewer material appears in public output.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-SCORE-PROPOSAL-MISMATCH",
+      "description": "The package proposes anything other than RDY-DIM-010 8 -> 9.",
+      "severity": "blocking"
+    },
+    {
+      "code": "GCH-UPSTREAM-REF-STALE",
+      "description": "A required upstream feature ref is stale, blocked, superseded, missing, or unknown.",
+      "severity": "blocking"
+    }
+  ],
+  "schemaVersion": "governance-customer-handoff-result-code-catalog/v1"
+}

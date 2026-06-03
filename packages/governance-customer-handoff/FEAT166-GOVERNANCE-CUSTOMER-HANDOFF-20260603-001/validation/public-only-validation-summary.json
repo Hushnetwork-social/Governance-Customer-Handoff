@@ -1,0 +1,14 @@
+{
+  "credentialRequired": false,
+  "customerAnswersPublished": false,
+  "directRegisterMutation": false,
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "privateCheckoutRequired": false,
+  "privatePayloadPublished": false,
+  "publicArtifactCount": 16,
+  "publicOnlyGate": "package generation and check-only replay use public schemas, catalogs, sanitized fixtures, public-safe summaries, and no-payload restricted refs only",
+  "publicOnlyValidation": true,
+  "schemaVersion": "governance-customer-handoff-public-only-validation-summary/v1",
+  "status": "accepted"
+}

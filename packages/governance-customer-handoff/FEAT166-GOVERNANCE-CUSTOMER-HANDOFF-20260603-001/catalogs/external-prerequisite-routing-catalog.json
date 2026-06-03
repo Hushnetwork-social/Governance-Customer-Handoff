@@ -1,0 +1,52 @@
+{
+  "feat149Alignment": true,
+  "featureId": "FEAT-166",
+  "publicStateReadinessResolvedByFeat166": false,
+  "routes": [
+    {
+      "evidenceRefType": "no-payload-restricted-ref",
+      "evidenceVisibility": "private-only",
+      "missingInputBehavior": "fail-closed",
+      "ownerClass": "customer",
+      "publicSafeSummary": "Customer authority review is required outside the public package.",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "routeId": "GCH-ROUTE-CUSTOMER-AUTHORITY-REVIEW",
+      "routeStatus": "blocked-pending-customer-input",
+      "sourceFeature": "FEAT-149"
+    },
+    {
+      "evidenceRefType": "no-payload-restricted-ref",
+      "evidenceVisibility": "restricted-ref-only",
+      "missingInputBehavior": "fail-closed",
+      "ownerClass": "external-authority",
+      "publicSafeSummary": "External legal or public prerequisite review is routed without payload publication.",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "routeId": "GCH-ROUTE-EXTERNAL-LEGAL-REVIEW",
+      "routeStatus": "blocked-pending-external-input",
+      "sourceFeature": "FEAT-149"
+    },
+    {
+      "evidenceRefType": "public-package-ref",
+      "evidenceVisibility": "public",
+      "missingInputBehavior": "fail-closed",
+      "ownerClass": "external-auditor",
+      "publicSafeSummary": "The public package can be consumed by auditor review without representing acceptance.",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "routeId": "GCH-ROUTE-AUDITOR-PACKAGE-REVIEW",
+      "routeStatus": "public-package-ready",
+      "sourceFeature": "FEAT-166"
+    },
+    {
+      "evidenceRefType": "promotion-owner-ref",
+      "evidenceVisibility": "public",
+      "missingInputBehavior": "fail-closed",
+      "ownerClass": "promotion-owner",
+      "publicSafeSummary": "The promotion owner reviews the proposal-only readiness package before any register action.",
+      "publicStateReadinessEffect": "external-boundary-only",
+      "routeId": "GCH-ROUTE-PROMOTION-OWNER-REVIEW",
+      "routeStatus": "proposal-review-ready",
+      "sourceFeature": "FEAT-156"
+    }
+  ],
+  "schemaVersion": "governance-customer-handoff-external-prerequisite-routing-catalog/v1"
+}
