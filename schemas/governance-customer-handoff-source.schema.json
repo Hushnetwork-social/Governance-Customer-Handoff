@@ -1,0 +1,724 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Hushnetwork-social/Governance-Customer-Handoff/schemas/governance-customer-handoff-source.schema.json",
+  "title": "Governance Customer Handoff Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "featureId",
+    "readinessBaseline",
+    "upstreamEvidence",
+    "responsibilityDomains",
+    "nonClaimBoundaries",
+    "externalPrerequisiteRouting",
+    "customerChecklist",
+    "publicBoundary",
+    "scoreProposal",
+    "restrictedEvidencePolicy"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "governance-customer-handoff-source/v1"
+    },
+    "featureId": {
+      "const": "FEAT-166"
+    },
+    "readinessBaseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "registerVersion",
+        "dimension",
+        "blocker",
+        "currentScore",
+        "targetScore"
+      ],
+      "properties": {
+        "registerVersion": {
+          "const": "RDY-REG-v0.1.7"
+        },
+        "dimension": {
+          "const": "RDY-DIM-010"
+        },
+        "blocker": {
+          "const": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001"
+        },
+        "currentScore": {
+          "const": 8
+        },
+        "targetScore": {
+          "const": 9
+        },
+        "registerManifestRef": {
+          "$ref": "#/$defs/publicRef"
+        }
+      }
+    },
+    "upstreamEvidence": {
+      "type": "array",
+      "minItems": 12,
+      "items": {
+        "$ref": "#/$defs/upstreamEvidenceRef"
+      },
+      "allOf": [
+        {
+          "contains": {
+            "$ref": "#/$defs/feat140Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat149Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat156Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat157Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat158Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat159Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat160Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat161Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat162Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat163Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat164Evidence"
+          }
+        },
+        {
+          "contains": {
+            "$ref": "#/$defs/feat165Evidence"
+          }
+        }
+      ]
+    },
+    "responsibilityDomains": {
+      "type": "array",
+      "minItems": 5,
+      "items": {
+        "$ref": "#/$defs/responsibilityDomain"
+      }
+    },
+    "nonClaimBoundaries": {
+      "type": "array",
+      "minItems": 8,
+      "items": {
+        "$ref": "#/$defs/nonClaimBoundary"
+      }
+    },
+    "externalPrerequisiteRouting": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "feat149Alignment",
+        "publicStateReadinessResolvedByFeat166",
+        "routes"
+      ],
+      "properties": {
+        "feat149Alignment": {
+          "const": true
+        },
+        "publicStateReadinessResolvedByFeat166": {
+          "const": false
+        },
+        "routes": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/externalPrerequisiteRoute"
+          }
+        }
+      }
+    },
+    "customerChecklist": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "genericQuestionsOnly",
+        "customerAnswersPublished",
+        "sections"
+      ],
+      "properties": {
+        "genericQuestionsOnly": {
+          "const": true
+        },
+        "customerAnswersPublished": {
+          "const": false
+        },
+        "sections": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/checklistSection"
+          }
+        }
+      }
+    },
+    "publicBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowedPublicMaterials",
+        "forbiddenPublicMaterials",
+        "publicOnlyValidation"
+      ],
+      "properties": {
+        "allowedPublicMaterials": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "forbiddenPublicMaterials": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "customer_legal_document",
+              "customer_checklist_answer",
+              "authority_name",
+              "signoff_record",
+              "external_auditor_note",
+              "public_authority_correspondence",
+              "restricted_reviewer_payload",
+              "voter_material",
+              "trustee_threshold_material",
+              "secret",
+              "credential",
+              "private_path",
+              "customer_specific_governance_detail"
+            ]
+          }
+        },
+        "publicOnlyValidation": {
+          "const": true
+        }
+      }
+    },
+    "scoreProposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimension",
+        "movement",
+        "directRegisterMutation"
+      ],
+      "properties": {
+        "dimension": {
+          "const": "RDY-DIM-010"
+        },
+        "movement": {
+          "const": "8 -> 9"
+        },
+        "directRegisterMutation": {
+          "const": false
+        }
+      }
+    },
+    "restrictedEvidencePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "publicRefsOnly",
+        "payloadsPublishedHere"
+      ],
+      "properties": {
+        "publicRefsOnly": {
+          "const": true
+        },
+        "payloadsPublishedHere": {
+          "const": false
+        },
+        "restrictedEvidenceRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/noPayloadRestrictedRef"
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "not": {
+        "required": [
+          "privatePath"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerLegalDocument"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerChecklistAnswer"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "rawRestrictedPayload"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "secret"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "publicRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "source",
+        "ref",
+        "hash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        }
+      }
+    },
+    "upstreamEvidenceRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "featureId",
+        "role",
+        "status",
+        "freshness",
+        "evidenceRefs"
+      ],
+      "properties": {
+        "featureId": {
+          "enum": [
+            "FEAT-140",
+            "FEAT-149",
+            "FEAT-156",
+            "FEAT-157",
+            "FEAT-158",
+            "FEAT-159",
+            "FEAT-160",
+            "FEAT-161",
+            "FEAT-162",
+            "FEAT-163",
+            "FEAT-164",
+            "FEAT-165"
+          ]
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "accepted-current",
+            "accepted-input",
+            "context-only",
+            "blocked-stale"
+          ]
+        },
+        "freshness": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidenceRefs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/publicRef"
+          }
+        }
+      }
+    },
+    "responsibilityDomain": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "ownerClass",
+        "requiredEvidence",
+        "mayClaim",
+        "mustNotClaim"
+      ],
+      "properties": {
+        "domain": {
+          "enum": [
+            "hush-technical-proof",
+            "customer-governance",
+            "external-authority-prerequisite",
+            "external-auditor-review",
+            "promotion-owner-action"
+          ]
+        },
+        "ownerClass": {
+          "enum": [
+            "hush",
+            "customer",
+            "external-authority",
+            "external-auditor",
+            "promotion-owner"
+          ]
+        },
+        "requiredEvidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "mayClaim": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "mustNotClaim": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "nonClaimBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "category",
+        "forbiddenClaim",
+        "allowedPublicWording",
+        "blockingResultCode"
+      ],
+      "properties": {
+        "category": {
+          "enum": [
+            "legal-sufficiency",
+            "agm-management",
+            "certification",
+            "external-audit-acceptance",
+            "public-state-readiness",
+            "production-rollout-approval",
+            "customer-governance-decision",
+            "readiness-register-mutation"
+          ]
+        },
+        "forbiddenClaim": {
+          "type": "string",
+          "minLength": 1
+        },
+        "allowedPublicWording": {
+          "type": "string",
+          "minLength": 1
+        },
+        "blockingResultCode": {
+          "type": "string",
+          "pattern": "^GCH-[A-Z0-9-]+$"
+        }
+      }
+    },
+    "externalPrerequisiteRoute": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "routeId",
+        "ownerClass",
+        "sourceFeature",
+        "publicStateReadinessEffect",
+        "evidenceVisibility"
+      ],
+      "properties": {
+        "routeId": {
+          "type": "string",
+          "pattern": "^GCH-ROUTE-[A-Z0-9-]+$"
+        },
+        "ownerClass": {
+          "enum": [
+            "customer",
+            "external-authority",
+            "external-auditor",
+            "promotion-owner"
+          ]
+        },
+        "sourceFeature": {
+          "enum": [
+            "FEAT-149",
+            "FEAT-156",
+            "FEAT-166"
+          ]
+        },
+        "publicStateReadinessEffect": {
+          "const": "external-boundary-only"
+        },
+        "evidenceVisibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only",
+            "private-only"
+          ]
+        }
+      }
+    },
+    "checklistSection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sectionId",
+        "questionClass",
+        "answerPublished",
+        "ownerClass"
+      ],
+      "properties": {
+        "sectionId": {
+          "type": "string",
+          "pattern": "^GCH-CHECKLIST-[A-Z0-9-]+$"
+        },
+        "questionClass": {
+          "type": "string",
+          "minLength": 1
+        },
+        "answerPublished": {
+          "const": false
+        },
+        "ownerClass": {
+          "enum": [
+            "customer",
+            "external-authority",
+            "external-auditor",
+            "promotion-owner"
+          ]
+        }
+      }
+    },
+    "noPayloadRestrictedRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "visibility",
+        "payloadPublished"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "visibility": {
+          "const": "restricted-ref-only"
+        },
+        "expectedHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "payloadPublished": {
+          "const": false
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "feat140Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-140"
+        }
+      }
+    },
+    "feat149Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-149"
+        }
+      }
+    },
+    "feat156Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-156"
+        }
+      }
+    },
+    "feat157Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-157"
+        }
+      }
+    },
+    "feat158Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-158"
+        }
+      }
+    },
+    "feat159Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-159"
+        }
+      }
+    },
+    "feat160Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-160"
+        }
+      }
+    },
+    "feat161Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-161"
+        }
+      }
+    },
+    "feat162Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-162"
+        }
+      }
+    },
+    "feat163Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-163"
+        }
+      }
+    },
+    "feat164Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-164"
+        }
+      }
+    },
+    "feat165Evidence": {
+      "type": "object",
+      "required": [
+        "featureId"
+      ],
+      "properties": {
+        "featureId": {
+          "const": "FEAT-165"
+        }
+      }
+    }
+  }
+}

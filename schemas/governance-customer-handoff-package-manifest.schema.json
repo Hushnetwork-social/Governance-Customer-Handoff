@@ -1,0 +1,185 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Hushnetwork-social/Governance-Customer-Handoff/schemas/governance-customer-handoff-package-manifest.schema.json",
+  "title": "Governance Customer Handoff Package Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "featureId",
+    "packageId",
+    "generatedAt",
+    "sourceRef",
+    "artifactRefs",
+    "validationRefs",
+    "readinessProposal",
+    "handoffRefs",
+    "restrictedEvidenceRefs"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "governance-customer-handoff-package-manifest/v1"
+    },
+    "featureId": {
+      "const": "FEAT-166"
+    },
+    "packageId": {
+      "type": "string",
+      "pattern": "^FEAT166-GOVERNANCE-CUSTOMER-HANDOFF-[0-9]{8}-[0-9]{3}$"
+    },
+    "generatedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "sourceRef": {
+      "$ref": "#/$defs/artifactRef"
+    },
+    "artifactRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifactRef"
+      }
+    },
+    "validationRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifactRef"
+      }
+    },
+    "readinessProposal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimension",
+        "movement",
+        "directRegisterMutation",
+        "proposalRef"
+      ],
+      "properties": {
+        "dimension": {
+          "const": "RDY-DIM-010"
+        },
+        "movement": {
+          "const": "8 -> 9"
+        },
+        "directRegisterMutation": {
+          "const": false
+        },
+        "proposalRef": {
+          "$ref": "#/$defs/artifactRef"
+        }
+      }
+    },
+    "handoffRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/artifactRef"
+      }
+    },
+    "restrictedEvidenceRefs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/noPayloadRestrictedRef"
+      }
+    }
+  },
+  "allOf": [
+    {
+      "not": {
+        "required": [
+          "privatePath"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "rawPayload"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerLegalDocument"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "customerChecklistAnswer"
+        ]
+      }
+    },
+    {
+      "not": {
+        "required": [
+          "directRegisterMutationAllowed"
+        ]
+      }
+    }
+  ],
+  "$defs": {
+    "artifactRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "visibility"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "visibility": {
+          "enum": [
+            "public",
+            "restricted-ref-only"
+          ]
+        },
+        "description": {
+          "type": "string"
+        }
+      }
+    },
+    "noPayloadRestrictedRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "visibility",
+        "payloadPublished"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "visibility": {
+          "const": "restricted-ref-only"
+        },
+        "expectedHash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "payloadPublished": {
+          "const": false
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
