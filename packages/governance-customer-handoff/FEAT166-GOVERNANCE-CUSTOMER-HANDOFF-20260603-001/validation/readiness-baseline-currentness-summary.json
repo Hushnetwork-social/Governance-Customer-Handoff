@@ -1,0 +1,32 @@
+{
+  "accepted": true,
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "publicOnlyValidation": true,
+  "readinessBaseline": {
+    "blocker": "RDY-BLOCK-INTERNAL_AUDIT_95_DIM010-001",
+    "currentScore": 8,
+    "dimension": "RDY-DIM-010",
+    "registerManifestRef": {
+      "hash": "1111111111111111111111111111111111111111111111111111111111111111",
+      "id": "RDY-REG-v0.1.7",
+      "ref": "accepted-baseline-v0.1.7",
+      "source": "readiness-baseline",
+      "visibility": "public"
+    },
+    "registerVersion": "RDY-REG-v0.1.7",
+    "targetScore": 9
+  },
+  "schemaVersion": "governance-customer-handoff-readiness-baseline-currentness-summary/v1",
+  "scoreProposal": {
+    "dimension": "RDY-DIM-010",
+    "directRegisterMutation": false,
+    "forbiddenReplayMovements": [
+      "FEAT-156 production rollout 7 -> 8",
+      "any RDY-DIM-010 movement other than 8 -> 9"
+    ],
+    "movement": "8 -> 9",
+    "proposalOnly": true
+  },
+  "status": "accepted"
+}

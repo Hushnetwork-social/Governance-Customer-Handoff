@@ -1,0 +1,122 @@
+{
+  "currentnessGate": "all required upstream refs accepted-current or accepted-input, hash-bound, and public-safe",
+  "featureId": "FEAT-166",
+  "generatedAt": "2026-06-03T12:00:00Z",
+  "missingFeatureIds": [],
+  "observedFeatureCount": 12,
+  "publicOnlyValidation": true,
+  "requiredFeatureCount": 12,
+  "schemaVersion": "governance-customer-handoff-upstream-evidence-currentness-summary/v1",
+  "staleOrBlockedFeatureIds": [],
+  "status": "accepted",
+  "upstreamEvidence": [
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-140",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "legal-governance-boundary",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-149",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "public-state-prerequisite-routing",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-156",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "production-rollout-promotion-baseline",
+      "status": "accepted-current"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-157",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "protocol-spec-proof-traceability",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-158",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "verifier-sample-tamper-corpus",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-159",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "cross-device-receipt-verification",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-160",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "publication-counting-replay",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-161",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "kms-custody-rehearsal",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-162",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "deployment-rollback-rehearsal",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-163",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "operational-evidence-second-run",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-164",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "retention-log-privacy-scans",
+      "status": "accepted-input"
+    },
+    {
+      "allRefsHashBound": true,
+      "allRefsPublicSafe": true,
+      "evidenceRefCount": 1,
+      "featureId": "FEAT-165",
+      "freshness": "current-for-rdy-reg-v0.1.7",
+      "role": "dispute-continuity-matrix",
+      "status": "accepted-input"
+    }
+  ]
+}
